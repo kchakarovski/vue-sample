@@ -2,7 +2,7 @@
   <div>
     <div>
       <!-- DAY 1 -->
-      <h1>DAY 1</h1>
+      <h1>DAY 101</h1>
       <div class="wrapper" v-if="showDiv">
         <span v-text="message" />
         <!-- Primer 1 -->
