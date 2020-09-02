@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="contact">
     <div>
       <!-- DAY 1 -->
-      <h1>DAY 102</h1>
+      <h1 class="hcontact">Vue.js</h1>
       <div class="wrapper" v-if="showDiv">
         <span v-text="message" />
         <!-- Primer 1 -->
@@ -17,9 +17,10 @@
     </div>
     <div>
       <!-- DAY 1 HOMEWORK -->
-      <h1>HOMEWORK 1</h1>
+      <h1 class="hcontact">HOMEWORK 1</h1>
+      <div class="container">
       <div class="d1wrapper" v-for="(value, key) in result" :key="key">
-        <img :src="value.img" />
+        <img :src="value.img" class="img" />
         <span>{{ value.msg1 }}</span>
         <span v-text="value.msg2"></span>
         <!-- PRIMER 1 -->
@@ -27,17 +28,17 @@
           @click="value.available = !value.available"
           :class="{ available: value.available }"
         >
-          <span class="btn">Click Me!</span>
+          <button class="btn">
+            <span>Click me</span>
+          </button>
         </div>
-        <div class="clr">|</div>
-        <h2>V FOR</h2>
-
         <!-- <ul>
               <li v-for="character in characters" :key="character">{{ character }}</li>
             </ul>
             <ul>
               <li v-for="(ninja, key) in ninjas" :key="key">{{ key + " " + ninja.name+ " " + ninja.age }}</li>
             </ul> -->
+      </div>
       </div>
     </div>
   </div>
@@ -71,8 +72,44 @@ export default {
             "Lorem ipsum sample Lorem ipsum sampleLorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sampleLorem ipsum sampleLorem ipsum sample 2",
           available: false,
         },
+        {
+          img:
+            "https://media1.tenor.com/images/cd37fa49c983ac905df0016fd5b6a2ee/tenor.gif?itemid=13165216",
+          msg1:
+            "Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample 1",
+          msg2:
+            "Lorem ipsum sample Lorem ipsum sampleLorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sampleLorem ipsum sampleLorem ipsum sample 1",
+          available: false,
+        },
+        {
+          img:
+            "https://media1.tenor.com/images/cd37fa49c983ac905df0016fd5b6a2ee/tenor.gif?itemid=13165216",
+          msg1:
+            "Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample 1",
+          msg2:
+            "Lorem ipsum sample Lorem ipsum sampleLorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sampleLorem ipsum sampleLorem ipsum sample 1",
+          available: false,
+        },
+        {
+          img:
+            "https://media1.tenor.com/images/cd37fa49c983ac905df0016fd5b6a2ee/tenor.gif?itemid=13165216",
+          msg1:
+            "Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample 1",
+          msg2:
+            "Lorem ipsum sample Lorem ipsum sampleLorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sampleLorem ipsum sampleLorem ipsum sample 1",
+          available: false,
+        },
+        {
+          img:
+            "https://media1.tenor.com/images/cd37fa49c983ac905df0016fd5b6a2ee/tenor.gif?itemid=13165216",
+          msg1:
+            "Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sample 1",
+          msg2:
+            "Lorem ipsum sample Lorem ipsum sampleLorem ipsum sample Lorem ipsum sample Lorem ipsum sample Lorem ipsum sampleLorem ipsum sampleLorem ipsum sample 1",
+          available: false,
+        },
       ],
-      available: false,
+      btn: false,
       nearby: false,
       message: "row 1",
       message1: "row 2",
@@ -105,7 +142,7 @@ export default {
     },
     compClasses() {
       return {
-        available: this.available,
+        btn: this.btn,
         nearby: this.nearby,
       };
     },
