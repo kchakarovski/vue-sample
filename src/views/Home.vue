@@ -6,13 +6,20 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  // components: {
+
+  // }
+  data() {
+    return {
+      
+    };
+  },
+  // mounted(){
+  //   setTimeout(() => {
+  //       this.handleClick();
+  //   },3000)
+  // },
+};
 </script>
