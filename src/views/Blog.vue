@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-  
-    
+  <div class="blog">
+
   </div>
 </template>
 
@@ -13,5 +12,6 @@ export default {
       
     };
   },
+
 };
 </script>

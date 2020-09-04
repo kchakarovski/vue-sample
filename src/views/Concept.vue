@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-  
-    
+  <div class="concept">
+
   </div>
 </template>
 

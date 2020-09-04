@@ -1,20 +1,9 @@
+@import './parts/colors';
 @import './parts/buttons';
 @import './parts/contact';
 @import './parts/about';
-#nav{
-    display: flex;
-    justify-content: center;
-}
-#nav ul{
-    list-style: none;
-}
-#nav li{
-    display: inline-block;
-    width: 100px;
-}
-#nav a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
+@import './parts/sample';
+@import './parts/home';
+@import './parts/concept';
+@import './parts/blog';
+@import './parts/app';
