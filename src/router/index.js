@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Contact from '../views/Contact.vue';
-
+import Contact from '../views/Contact.vue'
+import Sample from '../views/Sample.vue';
+import Blog from '../views/Blog.vue';
+import Concept from '../views/Concept.vue';
 Vue.use(VueRouter)
 
   const routes = [
@@ -24,9 +26,25 @@ Vue.use(VueRouter)
     name: 'Contact',
     component: Contact
   },
+  {
+    path: '/sample',
+    name: 'Sample',
+    component: Sample
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: Blog
+  },
+  {
+    path: '/concept',
+    name: 'Concept',
+    component: Concept
+  }
 ]
 
 const router = new VueRouter({
+  mode:"history",
   routes
 })
 

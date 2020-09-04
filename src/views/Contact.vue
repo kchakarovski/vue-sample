@@ -24,14 +24,14 @@
         <span>{{ value.msg1 }}</span>
         <span v-text="value.msg2"></span>
         <!-- PRIMER 1 -->
-        <div
+        <!-- <div
           @click="value.available = !value.available"
           :class="{ available: value.available }"
         >
           <button class="btn">
             <span>Click me</span>
           </button>
-        </div>
+        </div> -->
         <!-- <ul>
               <li v-for="character in characters" :key="character">{{ character }}</li>
             </ul>
