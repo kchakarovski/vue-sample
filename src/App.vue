@@ -1,17 +1,10 @@
 <template>
   <div class="app">
-    <header>
-      <div class="main-flex">
-        <div class="main-flex__item item-1"><a href="#">Maison Cacao</a></div>
-        <div class="main-flex__item item-2"><a href="#">Online Shop</a></div>
-        <div class="main-flex__item item-3">
-          <a href="#"><span>&#8593;</span> </a>
-        </div>
-      </div>
-    </header>
-    <div id="nav">
+    <app-header :input="title"></app-header>
+    <div class="main-navigation">
+      <!-- <<<---- main-navigation -->
       <div class="chocolate-img">
-        <img :src="chocolate" class="" />
+        <img :src="images.chocolate" />
       </div>
       <ul>
         <li><router-link to="/">Home</router-link></li>
@@ -22,28 +15,77 @@
         <li><router-link to="/concept">Concept</router-link></li>
       </ul>
     </div>
-    <div class="links">
-      <ul>
-        <li><a href="">Site Policy</a></li>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Sitemap</a></li>
-        <li><a href="">Instagram</a></li>
-        <li><a href="">Privacy Policy</a></li>
-        <li><a href="">Twitter</a></li>
-      </ul>
-    </div>
+    <h2>
+      {{ message }}
+    </h2>
+    <div v-html="paragraph"></div>
+    <!-- <div v-for="(value, key) in footer" :key="key">
+      <span>{{value.footer}}</span>
+    </div> -->
+    <footer-nav :footer="footernav" @clicked="change"></footer-nav>
     <router-view />
   </div>
 </template>
 <script>
-export default {git 
+import Header from "../src/components/Header";
+import FooterNav from "../src/components/FooterNav";
+
+export default {
   name: "App",
+  components: {
+    "app-header": Header,
+    FooterNav,
+  },
   data() {
     return {
-      chocolate:
-        "https://i1.wp.com/www.eatthis.com/wp-content/uploads/2017/10/dark-chocolate-bar-squares.jpg?fit=1024%2C750&ssl=1",
+      // footer: [{
+      //   li1:"Facebook",
+      //   li2:"Sitemap",
+      //   li3:"Instagram",        ( Eden objekt so poveke argumenti )
+      //   li4:"Privacy Policy",
+      //   li5:"Twitter",
+      //   li6:"Site Policy",
+      // }],
+      paragraph:"<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
+      footernav: [
+        {
+        name:"Facebook",
+        subtitle:"Temple"
+      },
+      {
+        name:"Sitemap",
+        subtitle:"Temple"
+      },
+      {
+        name:"Instagram",
+        subtitle:"Temple"
+      },
+      {
+        name:"Privacy Policy",
+        subtitle:"Temple"
+      },
+      {
+        name:"Twitter",
+        subtitle:"Temple"
+      },
+      {
+        name:"Site Policy",
+        subtitle:"Temple"
+      }
+      ],
+      title: "Maison Cacao",
+      message: "",
+      images: {
+        chocolate:
+          "https://i1.wp.com/www.eatthis.com/wp-content/uploads/2017/10/dark-chocolate-bar-squares.jpg?fit=1024%2C750&ssl=1",
+      },
     };
   },
+    methods: {
+      change(msg){
+        this.message = msg;
+      }
+    }
 };
 </script>
 <style lang="scss">

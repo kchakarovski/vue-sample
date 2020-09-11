@@ -73,15 +73,18 @@ export default {
   },
   methods: {
     sendData() {
-      alert(
-        "Name: " +
+      alert(this.fullName);
+    },
+  },
+  computed:{
+    fullName() {
+      return "Name: " +
           this.firstName +
           " Surname: " +
           this.lastName +
           " Email: " +
-          this.eMail
-      );
-    },
+          this.eMail;
+    }
   },
 };
 </script>
