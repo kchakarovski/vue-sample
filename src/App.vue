@@ -18,10 +18,11 @@
     <h2>
       {{ message }}
     </h2>
+    <div v-html="paragraph"></div>
     <!-- <div v-for="(value, key) in footer" :key="key">
       <span>{{value.footer}}</span>
     </div> -->
-    <footer-nav :footer="footer" @clicked="change"></footer-nav>
+    <footer-nav :footer="footernav" @clicked="change"></footer-nav>
     <router-view />
   </div>
 </template>
@@ -37,14 +38,41 @@ export default {
   },
   data() {
     return {
-      footer: [{
-        li1:"Facebook",
-        li2:"Sitemap",
-        li3:"Instagram",
-        li4:"Privacy Policy",
-        li5:"Twitter",
-        li6:"Site Policy",
-      }],
+      // footer: [{
+      //   li1:"Facebook",
+      //   li2:"Sitemap",
+      //   li3:"Instagram",        ( Eden objekt so poveke argumenti )
+      //   li4:"Privacy Policy",
+      //   li5:"Twitter",
+      //   li6:"Site Policy",
+      // }],
+      paragraph:"<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
+      footernav: [
+        {
+        name:"Facebook",
+        subtitle:"Temple"
+      },
+      {
+        name:"Sitemap",
+        subtitle:"Temple"
+      },
+      {
+        name:"Instagram",
+        subtitle:"Temple"
+      },
+      {
+        name:"Privacy Policy",
+        subtitle:"Temple"
+      },
+      {
+        name:"Twitter",
+        subtitle:"Temple"
+      },
+      {
+        name:"Site Policy",
+        subtitle:"Temple"
+      }
+      ],
       title: "Maison Cacao",
       message: "",
       images: {

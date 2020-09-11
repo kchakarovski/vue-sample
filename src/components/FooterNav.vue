@@ -1,12 +1,10 @@
 <template>
   <div class="footer-navigation">
-    <ul v-for="(value, key) in footer" :key="key">
-      <li>{{ value.li1 }}</li>
-      <li>{{ value.li2 }}</li>
-      <li>{{ value.li3 }}</li>
-      <li>{{ value.li4 }}</li>
-      <li>{{ value.li5 }}</li>
-      <li>{{ value.li6 }}</li>
+    <ul>
+      <li class="footer-navigation__wrapper" v-for="(value, key) in footer" :key="key">
+        <span v-text="value.name" />
+        <span v-text="value.subtitle" />
+      </li>
     </ul>
     <button @click="changeMessage('This is message from child component')">
       Change
@@ -24,7 +22,7 @@ export default {
   },
   props: {
     footer: {
-      type: String,
+      type: Array,
     },
   },
 };
