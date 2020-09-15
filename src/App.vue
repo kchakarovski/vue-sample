@@ -7,18 +7,23 @@
         <img :src="images.chocolate" />
       </div>
       <ul>
-        <li><router-link to="/">Home</router-link></li>
+        <!-- <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/contact">Contact</router-link></li>
         <li><router-link to="/sample">Sample</router-link></li>
         <li><router-link to="/blog">Blog</router-link></li>
-        <li><router-link to="/concept">Concept</router-link></li>
+        <li><router-link to="/concept">Concept</router-link></li> -->
+        <li v-for="(value, key) in router" :key="key">
+          <router-link :to="value.link"
+            ><span>{{ value.name }}</span></router-link
+          >
+        </li>
       </ul>
     </div>
     <h2>
       {{ message }}
     </h2>
-    <div v-html="paragraph"></div>
+    <!-- <div class="block" v-html="paragraph"></div> -->
     <!-- <div v-for="(value, key) in footer" :key="key">
       <span>{{value.footer}}</span>
     </div> -->
@@ -38,6 +43,32 @@ export default {
   },
   data() {
     return {
+      router: [
+        {
+          name: "Home",
+          link: "/",
+        },
+        {
+          name: "About",
+          link: "/about",
+        },
+        {
+          name: "Contact",
+          link: "/contact",
+        },
+        {
+          name: "Sample",
+          link: "/sample",
+        },
+        {
+          name: "Blog",
+          link: "/blog",
+        },
+        {
+          name: "Concept",
+          link: "/concept",
+        },
+      ],
       // footer: [{
       //   li1:"Facebook",
       //   li2:"Sitemap",
@@ -46,32 +77,34 @@ export default {
       //   li5:"Twitter",
       //   li6:"Site Policy",
       // }],
-      paragraph:"<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
+
+      paragraph:
+        "<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
       footernav: [
         {
-        name:"Facebook",
-        subtitle:"Temple"
-      },
-      {
-        name:"Sitemap",
-        subtitle:"Temple"
-      },
-      {
-        name:"Instagram",
-        subtitle:"Temple"
-      },
-      {
-        name:"Privacy Policy",
-        subtitle:"Temple"
-      },
-      {
-        name:"Twitter",
-        subtitle:"Temple"
-      },
-      {
-        name:"Site Policy",
-        subtitle:"Temple"
-      }
+          name: "Facebook",
+          subtitle: "Temple",
+        },
+        {
+          name: "Sitemap",
+          subtitle: "Temple",
+        },
+        {
+          name: "Instagram",
+          subtitle: "Temple",
+        },
+        {
+          name: "Privacy Policy",
+          subtitle: "Temple",
+        },
+        {
+          name: "Twitter",
+          subtitle: "Temple",
+        },
+        {
+          name: "Site Policy",
+          subtitle: "Temple",
+        },
       ],
       title: "Maison Cacao",
       message: "",
@@ -81,11 +114,11 @@ export default {
       },
     };
   },
-    methods: {
-      change(msg){
-        this.message = msg;
-      }
-    }
+  methods: {
+    change(msg) {
+      this.message = msg;
+    },
+  },
 };
 </script>
 <style lang="scss">

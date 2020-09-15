@@ -2,13 +2,13 @@
   <div class="footer-navigation">
     <ul>
       <li class="footer-navigation__wrapper" v-for="(value, key) in footer" :key="key">
-        <span v-text="value.name" />
-        <span v-text="value.subtitle" />
+        <span class="test" v-text="value.name"/>
+        <span class="subtitle" v-text="value.subtitle" />
       </li>
     </ul>
-    <button @click="changeMessage('This is message from child component')">
+    <!-- <button @click="changeMessage('This is message from child component')">
       Change
-    </button>
+    </button> -->
   </div>
 </template>
 
