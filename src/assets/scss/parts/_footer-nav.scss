@@ -1,0 +1,29 @@
+.footer-navigation{
+  &__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    &:hover .subtitle {
+      display: block;
+      text-align: center;
+      display: block;
+      text-align: center;
+      position: relative;
+      margin: 3px;
+      left: 40%;
+    }
+  }
+}
+.subtitle {
+  transition: 1.2s;
+  color: #4d4d4d;
+  border: 2px solid;
+  width: 45%;
+  padding: 3px;
+  border-radius: 6px 6px 6px 0px;
+  border-color: #000000;
+  font-size: 13px;
+  font-weight: bold;
+  display: none;
+}
