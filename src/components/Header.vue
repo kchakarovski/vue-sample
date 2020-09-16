@@ -21,9 +21,9 @@ export default {
     changeFun() {
       this.hide = !this.hide
     },
-    shuffle() {
-      this.footernav = _.shuffle(this.footernav);
-    },
+    // shuffle() {
+    //   this.footernav = _.shuffle(this.footernav);
+    // },
   },
   props:{
     input: {

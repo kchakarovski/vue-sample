@@ -1,49 +1,54 @@
 <template>
   <div class="app">
-    <app-header :input="title"></app-header>
+    <navcomp :headernavcomp="header"></navcomp>
+    <!-- <app-header :input="title"></app-header> -->
     <div class="main-navigation">
       <!-- <<<---- main-navigation -->
       <div class="chocolate-img">
         <img :src="images.chocolate" />
       </div>
       <ul>
+        <navcomp :routernavcomp="router"></navcomp>
         <!-- <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/contact">Contact</router-link></li>
         <li><router-link to="/sample">Sample</router-link></li>
         <li><router-link to="/blog">Blog</router-link></li>
         <li><router-link to="/concept">Concept</router-link></li> -->
-        <transition-group name="flip-list" tag="ul">
+        <!-- <transition-group name="flip-list" tag="ul">
           <li v-for="(value, key) in router" :key="key">
             <router-link :to="value.link"
-              ><span>{{ value.name }}</span></router-link
-            >
+              ><span>{{ value.name }}</span></router-link>
           </li>
-        </transition-group>
+        </transition-group> -->
+        <!-- <footer-nav :footer="router"></footer-nav> -->
       </ul>
     </div>
-    <h2>
+    <!-- <h2>
       {{ message }}
-    </h2>
+    </h2> -->
     <!-- <div class="block" v-html="paragraph"></div> -->
     <!-- <div v-for="(value, key) in footer" :key="key">
       <span>{{value.footer}}</span>
     </div> -->
-    <footer-nav :footer="footernav" @clicked="change"></footer-nav>
+    <!-- <footer-nav :footer="footernav" @clicked="change"></footer-nav> -->
+    <!-- <footer-nav :footer="footernav"></footer-nav> -->
+    <navcomp :footernavcomp="footernav"></navcomp>
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
   </div>
 </template>
 <script>
-import Header from "../src/components/Header";
-import FooterNav from "../src/components/FooterNav";
-
+// import Header from "../src/components/Header";
+// import FooterNav from "../src/components/FooterNav";
+import Navcomp from "../src/components/Navcomp";
 export default {
   name: "App",
   components: {
-    "app-header": Header,
-    FooterNav,
+    // "app-header": Header,
+    // FooterNav,
+    Navcomp,
   },
   data() {
     return {
@@ -80,12 +85,11 @@ export default {
       // footer: [{
       //   li1:"Facebook",
       //   li2:"Sitemap",
-      //   li3:"Instagram",        ( Eden objekt so poveke argumenti )
+      //   li3:"Instagram",       // ( Eden objekt so poveke argumenti )
       //   li4:"Privacy Policy",
       //   li5:"Twitter",
       //   li6:"Site Policy",
       // }],
-
       paragraph:
         "<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
       footernav: [
@@ -114,6 +118,17 @@ export default {
           subtitle: "Temple",
         },
       ],
+      header: [
+        {
+          name: "Maison Cacao",
+        },
+        {
+          name: "Online Shop",
+        },
+        {
+          name: "Arrow -> &#8593;",
+        },
+      ],
       title: "Maison Cacao",
       message: "",
       images: {
@@ -126,10 +141,21 @@ export default {
     change(msg) {
       this.message = msg;
     },
-    shuffle() {
-      this.footernav = _.shuffle(this.footernav);
-    },
+    // shuffle() {
+    //   this.footernav = _.shuffle(this.footernav);
+    // },
   },
+  // props: {
+  //   headernavcomp: {
+  //     type: String,
+  //   },
+  //   routernavcomp: {
+  //     type: Array,
+  //   },
+  //   footernavcomp: {
+  //     type: String,
+  //   },
+  // },
 };
 </script>
 <style lang="scss">
