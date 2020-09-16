@@ -13,11 +13,13 @@
         <li><router-link to="/sample">Sample</router-link></li>
         <li><router-link to="/blog">Blog</router-link></li>
         <li><router-link to="/concept">Concept</router-link></li> -->
-        <li v-for="(value, key) in router" :key="key">
-          <router-link :to="value.link"
-            ><span>{{ value.name }}</span></router-link
-          >
-        </li>
+        <transition-group name="flip-list" tag="ul">
+          <li v-for="(value, key) in router" :key="key">
+            <router-link :to="value.link"
+              ><span>{{ value.name }}</span></router-link
+            >
+          </li>
+        </transition-group>
       </ul>
     </div>
     <h2>
@@ -28,7 +30,9 @@
       <span>{{value.footer}}</span>
     </div> -->
     <footer-nav :footer="footernav" @clicked="change"></footer-nav>
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 <script>
@@ -67,6 +71,10 @@ export default {
         {
           name: "Concept",
           link: "/concept",
+        },
+        {
+          name: "Transition",
+          link: "/transition-name",
         },
       ],
       // footer: [{
@@ -117,6 +125,9 @@ export default {
   methods: {
     change(msg) {
       this.message = msg;
+    },
+    shuffle() {
+      this.footernav = _.shuffle(this.footernav);
     },
   },
 };
