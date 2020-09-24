@@ -134,12 +134,4 @@ export default {
 </script>
 <style lang="scss">
 @import "assets/scss/application";
-#footer{
-  .main-flex{
-    justify-content: flex-end;
-    &__item{
-      margin: 5px;
-    }
-  }
-}
 </style>
