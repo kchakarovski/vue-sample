@@ -5,7 +5,7 @@ import Contact from "../views/Contact.vue";
 import Sample from "../views/Sample.vue";
 import Blog from "../views/Blog.vue";
 import Concept from "../views/Concept.vue";
-import TransitionName from "../views/TransitionName.vue"
+import TransitionName from "../views/TransitionName.vue";
 // import Header from "../compoents/Header.vue";
 // Vue.component('app-header', Header);
 

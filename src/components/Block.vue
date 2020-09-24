@@ -1,27 +1,21 @@
 <template>
   <div>
-      <slot name="h">
+    <slot name="h">
       <h1>Header</h1>
-      </slot>
-      <span>Span</span>
-      <p>Paragraph lorem ipsum</p>
+    </slot>
+    <span>Span</span>
+    <p>Paragraph lorem ipsum</p>
   </div>
 </template>
 
 <script>
 export default {
-    name: "block",
-    data() {
-    return {
-      
-    };
+  name: "block",
+  data() {
+    return {};
   },
-    methods(){
-
-    }
-}
+  methods() {},
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

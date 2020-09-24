@@ -1,14 +1,15 @@
 <template>
   <div class="footer-navigation">
     <ul>
-      <li class="footer-navigation__wrapper" v-for="(value, key) in footer" :key="key">
-        <span class="test" v-text="value.name"/>
+      <li
+        class="footer-navigation__wrapper"
+        v-for="(value, key) in footer"
+        :key="key"
+      >
+        <span class="test" v-text="value.name" />
         <span class="subtitle" v-text="value.subtitle" />
       </li>
     </ul>
-    <!-- <button @click="changeMessage('This is message from child component')">
-      Change
-    </button> -->
   </div>
 </template>
 
@@ -27,11 +28,3 @@ export default {
   },
 };
 </script>
-
-<!-- 
-<li><a href="">Facebook</a></>
-<li><a href="">Site Policy</a></li>
-<li><a href="">Sitemap</a></li>
-<li><a href="">Instagram</a></li>
-<li><a href="">Privacy Policy</a></li>
-<li><a href="">Twitter</a></li> -->

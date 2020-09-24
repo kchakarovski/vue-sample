@@ -1,39 +1,18 @@
 <template>
   <div class="app">
-    <navcomp :headernavcomp="header"></navcomp>
-    <!-- <app-header :input="title"></app-header> -->
+    <navcomp :inputData="header"></navcomp>
     <div class="main-navigation">
       <!-- <<<---- main-navigation -->
       <div class="chocolate-img">
         <img :src="images.chocolate" />
       </div>
       <ul>
-        <navcomp :routernavcomp="router"></navcomp>
-        <!-- <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
-        <li><router-link to="/sample">Sample</router-link></li>
-        <li><router-link to="/blog">Blog</router-link></li>
-        <li><router-link to="/concept">Concept</router-link></li> -->
-        <!-- <transition-group name="flip-list" tag="ul">
-          <li v-for="(value, key) in router" :key="key">
-            <router-link :to="value.link"
-              ><span>{{ value.name }}</span></router-link>
-          </li>
-        </transition-group> -->
-        <!-- <footer-nav :footer="router"></footer-nav> -->
+        <navcomp :inputData="router"></navcomp>
       </ul>
     </div>
-    <!-- <h2>
-      {{ message }}
-    </h2> -->
-    <!-- <div class="block" v-html="paragraph"></div> -->
-    <!-- <div v-for="(value, key) in footer" :key="key">
-      <span>{{value.footer}}</span>
-    </div> -->
-    <!-- <footer-nav :footer="footernav" @clicked="change"></footer-nav> -->
-    <!-- <footer-nav :footer="footernav"></footer-nav> -->
-    <navcomp :footernavcomp="footernav"></navcomp>
+    <div id="footer">
+    <navcomp :inputData="footernav"></navcomp>
+    </div>
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
@@ -95,38 +74,47 @@ export default {
       footernav: [
         {
           name: "Facebook",
+          link: "",
           subtitle: "Temple",
         },
         {
           name: "Sitemap",
+          link: "",
           subtitle: "Temple",
         },
         {
           name: "Instagram",
+          link: "",
           subtitle: "Temple",
         },
         {
           name: "Privacy Policy",
+          link: "",
           subtitle: "Temple",
         },
         {
           name: "Twitter",
+          link: "",
           subtitle: "Temple",
         },
         {
           name: "Site Policy",
+          link: "",
           subtitle: "Temple",
         },
       ],
       header: [
         {
           name: "Maison Cacao",
+          link: "/about",
         },
         {
           name: "Online Shop",
+          link: "/sample",
         },
         {
-          name: "Arrow -> &#8593;",
+          name: "Contact",
+          link: "/contact",
         },
       ],
       title: "Maison Cacao",
@@ -141,23 +129,17 @@ export default {
     change(msg) {
       this.message = msg;
     },
-    // shuffle() {
-    //   this.footernav = _.shuffle(this.footernav);
-    // },
   },
-  // props: {
-  //   headernavcomp: {
-  //     type: String,
-  //   },
-  //   routernavcomp: {
-  //     type: Array,
-  //   },
-  //   footernavcomp: {
-  //     type: String,
-  //   },
-  // },
 };
 </script>
 <style lang="scss">
 @import "assets/scss/application";
+#footer{
+  .main-flex{
+    justify-content: flex-end;
+    &__item{
+      margin: 5px;
+    }
+  }
+}
 </style>

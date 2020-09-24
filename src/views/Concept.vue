@@ -11,13 +11,11 @@
 import Block from "../components/Block";
 export default {
   name: "concept",
-  components:{
-    Block
+  components: {
+    Block,
   },
   data() {
-    return {
-      
-    };
+    return {};
   },
 };
 </script>
