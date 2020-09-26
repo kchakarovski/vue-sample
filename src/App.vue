@@ -1,21 +1,27 @@
 <template>
   <div class="app">
-    <navcomp :inputData="header"></navcomp>
-    <div class="main-navigation">
-      <!-- <<<---- main-navigation -->
-      <div class="chocolate-img">
-        <img :src="images.chocolate" />
+    <div class="bgimg">
+      <div id="header">
+        <navcomp :inputData="header"></navcomp>
       </div>
-      <ul>
-        <navcomp :inputData="router"></navcomp>
-      </ul>
+      <div class="main-navigation">
+        <!-- <<<---- main-navigation -->
+        <!-- <div class="chocolate-img">
+        <img :src="images.chocolate" />
+      </div> -->
+        <!-- <ul>
+          <navcomp :inputData="router"></navcomp>
+        </ul> -->
+      </div>
+      <footer>
+      <div id="footer">
+        <navcomp :inputData="footernav"></navcomp>
+      </div>
+      </footer>
     </div>
-    <div id="footer">
-    <navcomp :inputData="footernav"></navcomp>
-    </div>
-    <transition name="fade" mode="out-in">
-      <router-view />
-    </transition>
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
   </div>
 </template>
 <script>
@@ -73,40 +79,40 @@ export default {
         "<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
       footernav: [
         {
-          name: "Facebook",
-          link: "",
+          name: "Copyright © 2020 Cakarovski | Contact",
+          link: "/", //mailto:cakarovskidev@gmail.com
           subtitle: "Temple",
         },
-        {
-          name: "Sitemap",
-          link: "",
-          subtitle: "Temple",
-        },
-        {
-          name: "Instagram",
-          link: "",
-          subtitle: "Temple",
-        },
-        {
-          name: "Privacy Policy",
-          link: "",
-          subtitle: "Temple",
-        },
-        {
-          name: "Twitter",
-          link: "",
-          subtitle: "Temple",
-        },
-        {
-          name: "Site Policy",
-          link: "",
-          subtitle: "Temple",
-        },
+        // {
+        //   name: "Sitemap",
+        //   link: "",
+        //   subtitle: "Temple",
+        // },
+        // {
+        //   name: "Instagram",
+        //   link: "",
+        //   subtitle: "Temple",
+        // },
+        // {
+        //   name: "Privacy Policy",
+        //   link: "",
+        //   subtitle: "Temple",
+        // },
+        // {
+        //   name: "Twitter",
+        //   link: "",
+        //   subtitle: "Temple",
+        // },
+        // {
+        //   name: "Site Policy",
+        //   link: "",
+        //   subtitle: "Temple",
+        // },
       ],
       header: [
         {
           name: "Maison Cacao",
-          link: "/about",
+          link: "/",
         },
         {
           name: "Online Shop",

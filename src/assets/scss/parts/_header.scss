@@ -1,0 +1,23 @@
+#header{
+    .main-flex{
+        justify-content: flex-start;
+        padding: 20px;
+        background: black;
+        position: relative;
+        bottom: 16px;
+    &__item{
+        margin-left: 2%;
+        margin-right: 3%;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $tertiary;
+    }
+    a{
+        color: $tertiary;
+        &:hover{
+            transition: 0.7s;
+            color: rgb(192, 192, 192);
+        }
+    }
+}
+}

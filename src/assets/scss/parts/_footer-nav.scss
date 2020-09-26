@@ -27,3 +27,13 @@
   font-weight: bold;
   display: none;
 }
+#footer{
+  .main-flex{
+    justify-content: center;
+    &__item {
+      font-size: 18px;
+      font-weight: bold;
+      text-shadow: 2px 1px 5px black;  
+    }
+  }
+}

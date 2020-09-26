@@ -1,7 +1,8 @@
 .main-navigation {
-    margin-top: 10%;
+    // margin-top: 10%;
     display: flex;
     justify-content: space-evenly;
+    text-shadow: 3px 1px  2px black;
   }
   .main-navigation ul {
     list-style: none;
@@ -20,7 +21,7 @@
   }
   .main-navigation a {
     text-decoration: none;
-    color: $brand-secondary;
+    color: $tertiary;
     font-size: 20px;
   }
   
