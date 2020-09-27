@@ -9,19 +9,21 @@
         <!-- <div class="chocolate-img">
         <img :src="images.chocolate" />
       </div> -->
-        <!-- <ul>
-          <navcomp :inputData="router"></navcomp>
-        </ul> -->
+        <div id="main">
+          <ul>
+            <navcomp :inputData="router"></navcomp>
+          </ul>
+        </div>
       </div>
       <footer>
-      <div id="footer">
-        <navcomp :inputData="footernav"></navcomp>
-      </div>
+        <div id="footer">
+          <navcomp :inputData="footernav"></navcomp>
+        </div>
       </footer>
     </div>
-      <transition name="fade" mode="out-in">
-        <router-view />
-      </transition>
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 <script>
@@ -40,32 +42,32 @@ export default {
       router: [
         {
           name: "Home",
-          link: "/",
+          link: "",
         },
         {
           name: "About",
-          link: "/about",
+          link: "/",
         },
         {
           name: "Contact",
-          link: "/contact",
+          link: "/",
         },
-        {
-          name: "Sample",
-          link: "/sample",
-        },
-        {
-          name: "Blog",
-          link: "/blog",
-        },
-        {
-          name: "Concept",
-          link: "/concept",
-        },
-        {
-          name: "Transition",
-          link: "/transition-name",
-        },
+        // {
+        //   name: "Sample",
+        //   link: "/sample",
+        // },
+        // {
+        //   name: "Blog",
+        //   link: "/blog",
+        // },
+        // {
+        //   name: "Concept",
+        //   link: "/concept",
+        // },
+        // {
+        //   name: "Transition",
+        //   link: "/transition-name",
+        // },
       ],
       // footer: [{
       //   li1:"Facebook",
@@ -115,8 +117,16 @@ export default {
           link: "/",
         },
         {
-          name: "Online Shop",
+          name: "About",
           link: "/sample",
+        },
+        {
+          name: "Services",
+          link: "/",
+        },
+        {
+          name: "Menu",
+          link: "/",
         },
         {
           name: "Contact",

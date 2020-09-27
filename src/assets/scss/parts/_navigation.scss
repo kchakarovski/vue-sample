@@ -1,22 +1,23 @@
 .main-navigation {
     // margin-top: 10%;
     display: flex;
-    justify-content: space-evenly;
     text-shadow: 3px 1px  2px black;
+    justify-content: center;
   }
   .main-navigation ul {
     list-style: none;
-    height: 300px;
+    // align-items: center;
+    height: 520px;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     flex-wrap: wrap;
-    width: 30%;
   }
-  .main-navigation ul > li {
-    flex: 1 1 100px;
-  }
+  // .main-navigation ul > li {
+  //   flex: 1 1 100px;
+  // }
   .main-navigation li {
-    width: 130px;
+    width: 300px;
+    justify-content: center;
     text-transform: uppercase;
   }
   .main-navigation a {
