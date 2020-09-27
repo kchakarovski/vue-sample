@@ -5,10 +5,6 @@
         <navcomp :inputData="header"></navcomp>
       </div>
       <div class="main-navigation">
-        <!-- <<<---- main-navigation -->
-        <!-- <div class="chocolate-img">
-        <img :src="images.chocolate" />
-      </div> -->
         <div id="main">
           <ul>
             <navcomp :inputData="main"></navcomp>
