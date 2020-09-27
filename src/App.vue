@@ -11,7 +11,7 @@
       </div> -->
         <div id="main">
           <ul>
-            <navcomp :inputData="router"></navcomp>
+            <navcomp :inputData="main"></navcomp>
           </ul>
         </div>
       </div>
@@ -39,18 +39,27 @@ export default {
   },
   data() {
     return {
-      router: [
+      main: [
         {
-          name: "Home",
-          link: "",
+          name: "Drinks",
+          link: "/",
+          // img: "",
+          txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla bla ipsum bla bla ipsum bla lorem ipsum ipsum lorem",
+          btn: "Read More",
         },
         {
-          name: "About",
+          name: "Cuisine",
           link: "/",
+          // img: "",
+          txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
+          btn: "Read More",
         },
         {
-          name: "Contact",
+          name: "Cooks",
           link: "/",
+          // img: "",
+          txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
+          btn: "Read More",
         },
         // {
         //   name: "Sample",
@@ -83,33 +92,7 @@ export default {
         {
           name: "Copyright © 2020 Cakarovski | Contact",
           link: "/", //mailto:cakarovskidev@gmail.com
-          subtitle: "Temple",
         },
-        // {
-        //   name: "Sitemap",
-        //   link: "",
-        //   subtitle: "Temple",
-        // },
-        // {
-        //   name: "Instagram",
-        //   link: "",
-        //   subtitle: "Temple",
-        // },
-        // {
-        //   name: "Privacy Policy",
-        //   link: "",
-        //   subtitle: "Temple",
-        // },
-        // {
-        //   name: "Twitter",
-        //   link: "",
-        //   subtitle: "Temple",
-        // },
-        // {
-        //   name: "Site Policy",
-        //   link: "",
-        //   subtitle: "Temple",
-        // },
       ],
       header: [
         {

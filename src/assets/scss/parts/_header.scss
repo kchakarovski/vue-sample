@@ -5,6 +5,7 @@
     background: black;
     position: relative;
     bottom: 16px;
+    cursor: default;
     &__item {
       margin-left: 2%;
       margin-right: 3%;
@@ -14,12 +15,16 @@
       flex-grow: 0.1;
       align-items: center;
       border-right: 2px solid white;
+      transition: 0.4s ease-in-out;
+      &:hover{
+          border-right-color: $globalhover;
+      }
     }
     a {
+        transition: 0.4s ease-in-out;
       color: $tertiary;
       &:hover {
-        transition: 0.7s;
-        color: rgb(192, 192, 192);
+        color: $globalhover;
       }
     }
   }

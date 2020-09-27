@@ -12,10 +12,11 @@
   background-size: cover;
   overflow: hidden;
   min-height: 730px;
+
 }
 .main-flex {
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
 
   &__item {
     display: flex;
@@ -24,15 +25,44 @@
 }
 #main{
   .main-flex{
-  
   &__item {
-    background: whitesmoke;
-    opacity: 0.4;
+    background: #161f2896;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 60px;
+    transition: 0.7s ease-in-out;
+    &:hover{
+      background: #161f28de;
+    }
   }
+  span{
+    position: relative;
+    top: 30px;
+    font-size: 35px;
+  }
+  div{
+    color: darkgray;
+    text-transform: none;
+    padding: 15px;
+    text-shadow: 1px 1px 2.5px black;
+  }
+  h1{
+    border: 2px solid;
+    border-radius: 2px;
+    padding: 10px;
+    background: #5959597d;
+    font-size: 25px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    &:hover{
+      color:$globalhover;
+      border-color: rgb(143, 143, 143);
+    }
+  }
+  }
+  a{
+    cursor: default;
   }
 }
 a {

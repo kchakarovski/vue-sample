@@ -19,10 +19,12 @@
     width: 300px;
     justify-content: center;
     text-transform: uppercase;
+    cursor: default;
   }
   .main-navigation a {
     text-decoration: none;
     color: $tertiary;
     font-size: 20px;
+    height: 80px;
   }
   
