@@ -5,6 +5,7 @@ import Contact from "../views/Contact.vue";
 import Sample from "../views/Sample.vue";
 import Blog from "../views/Blog.vue";
 import Concept from "../views/Concept.vue";
+import TransitionName from "../views/TransitionName.vue";
 // import Header from "../compoents/Header.vue";
 // Vue.component('app-header', Header);
 
@@ -44,6 +45,11 @@ const routes = [
     path: "/concept",
     name: "Concept",
     component: Concept,
+  },
+  {
+    path: "/transition-name",
+    name: "TransitionName",
+    component: TransitionName,
   },
 ];
 

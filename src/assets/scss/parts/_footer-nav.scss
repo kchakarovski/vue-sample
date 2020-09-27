@@ -1,4 +1,4 @@
-.footer-navigation{
+.footer-navigation {
   &__wrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -15,15 +15,20 @@
     }
   }
 }
-.subtitle {
-  transition: 1.2s;
-  color: #4d4d4d;
-  border: 2px solid;
-  width: 45%;
-  padding: 3px;
-  border-radius: 6px 6px 6px 0px;
-  border-color: #000000;
-  font-size: 13px;
-  font-weight: bold;
-  display: none;
+#footer {
+  .main-flex {
+    justify-content: center;
+    &__item {
+      font-size: 18px;
+      font-weight: bold;
+      text-shadow: 2px 1px 2px black;
+    }
+  }
+  span {
+    text-shadow: 2px 1.3px 1px black;
+    transition: 0.7s;
+    &:hover {
+      color: $globalhover;
+    }
+  }
 }

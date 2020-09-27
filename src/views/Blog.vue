@@ -1,12 +1,16 @@
 <template>
   <div class="blog">
-
+    <block></block>
   </div>
 </template>
 
 <script>
+import Block from "../components/Block";
 export default {
-  name: "App",
+  name: "blog",
+  components:{
+    Block
+  },
   data() {
     return {
       

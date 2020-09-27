@@ -1,109 +1,119 @@
 <template>
   <div class="app">
-    <app-header :input="title"></app-header>
-    <div class="main-navigation">
-      <!-- <<<---- main-navigation -->
-      <div class="chocolate-img">
-        <img :src="images.chocolate" />
+    <div class="bgimg">
+      <div id="header">
+        <navcomp :inputData="header"></navcomp>
       </div>
-      <ul>
-        <!-- <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
-        <li><router-link to="/sample">Sample</router-link></li>
-        <li><router-link to="/blog">Blog</router-link></li>
-        <li><router-link to="/concept">Concept</router-link></li> -->
-        <li v-for="(value, key) in router" :key="key">
-          <router-link :to="value.link"
-            ><span>{{ value.name }}</span></router-link
-          >
-        </li>
-      </ul>
+      <div class="main-navigation">
+        <!-- <<<---- main-navigation -->
+        <!-- <div class="chocolate-img">
+        <img :src="images.chocolate" />
+      </div> -->
+        <div id="main">
+          <ul>
+            <navcomp :inputData="main"></navcomp>
+          </ul>
+        </div>
+      </div>
+      <footer>
+        <div id="footer">
+          <navcomp :inputData="footernav"></navcomp>
+        </div>
+      </footer>
     </div>
-    <h2>
-      {{ message }}
-    </h2>
-    <!-- <div class="block" v-html="paragraph"></div> -->
-    <!-- <div v-for="(value, key) in footer" :key="key">
-      <span>{{value.footer}}</span>
-    </div> -->
-    <footer-nav :footer="footernav" @clicked="change"></footer-nav>
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 <script>
-import Header from "../src/components/Header";
-import FooterNav from "../src/components/FooterNav";
-
+// import Header from "../src/components/Header";
+// import FooterNav from "../src/components/FooterNav";
+import Navcomp from "../src/components/Navcomp";
 export default {
   name: "App",
   components: {
-    "app-header": Header,
-    FooterNav,
+    // "app-header": Header,
+    // FooterNav,
+    Navcomp,
   },
   data() {
     return {
-      router: [
+      main: [
         {
-          name: "Home",
+          name: "Drinks",
           link: "/",
+          // img: "",
+          txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla bla ipsum bla bla ipsum bla lorem ipsum ipsum lorem",
+          btn: "Read More",
         },
         {
-          name: "About",
-          link: "/about",
+          name: "Cuisine",
+          link: "/",
+          // img: "",
+          txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
+          btn: "Read More",
         },
         {
-          name: "Contact",
-          link: "/contact",
+          name: "Cooks",
+          link: "/",
+          // img: "",
+          txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
+          btn: "Read More",
         },
-        {
-          name: "Sample",
-          link: "/sample",
-        },
-        {
-          name: "Blog",
-          link: "/blog",
-        },
-        {
-          name: "Concept",
-          link: "/concept",
-        },
+        // {
+        //   name: "Sample",
+        //   link: "/sample",
+        // },
+        // {
+        //   name: "Blog",
+        //   link: "/blog",
+        // },
+        // {
+        //   name: "Concept",
+        //   link: "/concept",
+        // },
+        // {
+        //   name: "Transition",
+        //   link: "/transition-name",
+        // },
       ],
       // footer: [{
       //   li1:"Facebook",
       //   li2:"Sitemap",
-      //   li3:"Instagram",        ( Eden objekt so poveke argumenti )
+      //   li3:"Instagram",       // ( Eden objekt so poveke argumenti )
       //   li4:"Privacy Policy",
       //   li5:"Twitter",
       //   li6:"Site Policy",
       // }],
-
       paragraph:
         "<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
       footernav: [
         {
-          name: "Facebook",
-          subtitle: "Temple",
+          name: "Copyright © 2020 Cakarovski | Contact",
+          link: "/", //mailto:cakarovskidev@gmail.com
+        },
+      ],
+      header: [
+        {
+          name: "Maison Cacao",
+          link: "/",
         },
         {
-          name: "Sitemap",
-          subtitle: "Temple",
+          name: "About",
+          link: "/sample",
         },
         {
-          name: "Instagram",
-          subtitle: "Temple",
+          name: "Services",
+          link: "/",
         },
         {
-          name: "Privacy Policy",
-          subtitle: "Temple",
+          name: "Menu",
+          link: "/",
         },
         {
-          name: "Twitter",
-          subtitle: "Temple",
-        },
-        {
-          name: "Site Policy",
-          subtitle: "Temple",
+          name: "Contact",
+          link: "/contact",
         },
       ],
       title: "Maison Cacao",
