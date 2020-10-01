@@ -37,6 +37,8 @@
     }
   }
   span{
+    display: flex;
+    justify-content: center;
     position: relative;
     top: 30px;
     font-size: 35px;
@@ -45,15 +47,20 @@
     color: darkgray;
     text-transform: none;
     padding: 15px;
+    margin-top: 50px;
     text-shadow: 1px 1px 2.5px black;
   }
   h1{
+    margin: 15px auto;
     border: 2px solid;
     border-radius: 2px;
     padding: 10px;
     background: #5959597d;
     font-size: 25px;
     transition: 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    width: 55%;
     cursor: pointer;
     &:hover{
       color:$globalhover;

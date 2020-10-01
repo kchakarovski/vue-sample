@@ -1,0 +1,17 @@
+.produkt-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &__item{
+        color: $brand-primary;
+        border: 1px solid;
+        padding: 10%;
+        text-align: right;
+        font-size: 30px;
+        width: 78%;
+        transition: 0.7s ease-in-out;
+        &:hover{
+            color: red;
+        }
+    }
+}

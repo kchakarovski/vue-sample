@@ -11,15 +11,15 @@
           </ul>
         </div>
       </div>
-      <footer>
-        <div id="footer">
-          <navcomp :inputData="footernav"></navcomp>
-        </div>
-      </footer>
     </div>
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
+    <footer>
+        <div id="footer">
+          <a :href="footernav.link"><span v-text="footernav.name"></span></a>
+        </div>
+      </footer>
   </div>
 </template>
 <script>
@@ -37,78 +37,53 @@ export default {
     return {
       main: [
         {
-          name: "Drinks",
-          link: "/",
-          // img: "",
+          name: "Пијалоци",
+          link: "/produkti/pijaloci",
+          //  img: "",
           txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla bla ipsum bla bla ipsum bla lorem ipsum ipsum lorem",
           btn: "Read More",
         },
         {
-          name: "Cuisine",
-          link: "/",
+          name: "Брза Храна",
+          link: "/produkti/brza-hrana",
           // img: "",
           txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
           btn: "Read More",
         },
         {
-          name: "Cooks",
-          link: "/",
+          name: "Десерти",
+          link: "/produkti/deserti",
           // img: "",
           txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
           btn: "Read More",
         },
-        // {
-        //   name: "Sample",
-        //   link: "/sample",
-        // },
-        // {
-        //   name: "Blog",
-        //   link: "/blog",
-        // },
-        // {
-        //   name: "Concept",
-        //   link: "/concept",
-        // },
-        // {
-        //   name: "Transition",
-        //   link: "/transition-name",
-        // },
       ],
-      // footer: [{
-      //   li1:"Facebook",
-      //   li2:"Sitemap",
-      //   li3:"Instagram",       // ( Eden objekt so poveke argumenti )
-      //   li4:"Privacy Policy",
-      //   li5:"Twitter",
-      //   li6:"Site Policy",
-      // }],
       paragraph:
         "<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
-      footernav: [
+      footernav: 
         {
           name: "Copyright © 2020 Cakarovski | Contact",
-          link: "/", //mailto:cakarovskidev@gmail.com
+          link: "mailto:cakarovskidev@gmail.com", 
         },
-      ],
       header: [
         {
-          name: "Maison Cacao",
+          name: "Малага",
           link: "/",
         },
         {
-          name: "About",
+          name: "За Нас",
           link: "/sample",
         },
         {
-          name: "Services",
+          name: "Услуги",
           link: "/",
         },
         {
-          name: "Menu",
+          name: "Мени",
           link: "/",
         },
         {
-          name: "Contact",
+          name: "Контакт",
           link: "/contact",
         },
       ],
