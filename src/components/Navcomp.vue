@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div>
     <ul class="main-flex">
       <li class="main-flex__item" v-for="(value, key) in inputData" :key="key">
