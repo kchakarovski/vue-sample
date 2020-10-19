@@ -58,8 +58,6 @@ export default {
           btn: "Read More",
         },
       ],
-      paragraph:
-        "<p>Lorem ipsum <br /> <h1>Some title</h1> <br /> <p>Lorem ipsum 2</p> </p>",
       footernav: 
         {
           name: "Copyright © 2020 Cakarovski | Contact",
@@ -88,11 +86,6 @@ export default {
         },
       ],
       title: "Maison Cacao",
-      message: "",
-      images: {
-        chocolate:
-          "https://i1.wp.com/www.eatthis.com/wp-content/uploads/2017/10/dark-chocolate-bar-squares.jpg?fit=1024%2C750&ssl=1",
-      },
     };
   },
   methods: {
