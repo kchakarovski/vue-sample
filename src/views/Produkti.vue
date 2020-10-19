@@ -48,10 +48,12 @@
 </template>
 
 <script>
+import {produkti} from "../data/produkti";
 export default {
   name: "page",
   data() {
     return {
+      produkti,
       slug: "",
       selectedData: [],
       main: [
