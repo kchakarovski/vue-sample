@@ -1,0 +1,42 @@
+.produkt-flex {
+  display: flex;
+  margin: 40px;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  span {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    display: flex;
+    margin-right: 50%;
+    width: 200px;
+    border-radius: 100%;
+  }
+  &__item {
+    color: gray;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 10%;
+    display: flex;
+    text-align: right;
+    font-size: 22px;
+    justify-content: space-evenly;
+    width: 79%;
+    transition: 0.7s ease-in-out;
+    &:hover {
+      color: red;
+    }
+  }
+}
+#pici {
+  img {
+  }
+  .produkt-flex {
+    display: unset;
+    &__item {
+      padding: 0px;
+      justify-content: unset;
+    }
+  }
+}

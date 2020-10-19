@@ -6,6 +6,7 @@ import Sample from "../views/Sample.vue";
 import Blog from "../views/Blog.vue";
 import Concept from "../views/Concept.vue";
 import TransitionName from "../views/TransitionName.vue";
+import Produkti from "../views/Produkti.vue";
 // import Header from "../compoents/Header.vue";
 // Vue.component('app-header', Header);
 
@@ -16,6 +17,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/produkti/:slug",
+    name: "Produkti",
+    component: Produkti,
   },
   {
     path: "/about",
