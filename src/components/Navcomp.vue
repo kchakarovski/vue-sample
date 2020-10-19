@@ -4,7 +4,7 @@
       <li class="main-flex__item" v-for="(value, key) in inputData" :key="key">
         <router-link :to="value.link">
           <span v-text="value.name" />
-          <span><img :src="value.img" /></span>
+          <img :src="value.img" />
           <div v-text="value.txt" />
           <button v-text="value.btn" />
         </router-link>

@@ -8,8 +8,8 @@
 
         &__item {
             margin-left: 2%;
-            align-items: center;
             margin-right: 3%;
+            align-items: center;
             text-transform: uppercase;
             font-weight: bold;
             color: white;
@@ -42,6 +42,10 @@
         display: flex;
         font-size: 25px;
         border-right: none;
+        cursor: default;
+        &span{
+            cursor: pointer;
+        }
     }
 
     .main-flex__item:nth-child(5) {
@@ -52,50 +56,62 @@
 #main {
     .main-flex {
         &__item {
-            background: #161f2896;
+            background: #161f28de;
             display: flex;
             justify-content: center;
             margin: 60px;
             transition: 0.7s ease-in-out;
 
             &:hover {
-                background: #161f28de;
+                background: #161f28ed;
+
+                img {
+                    box-shadow: 0px 0px 17px #5e5e5e;
+                }
             }
         }
 
         span {
+            margin-top: 15px;
             display: flex;
             justify-content: center;
             position: relative;
-            top: 30px;
             font-size: 35px;
+        }
+
+        img {
+            border-radius: 50%;
+            display: block;
+            margin: 15px auto 0px;
+            transition: 0.7s ease-in-out;
         }
 
         div {
             color: darkgray;
             text-transform: none;
             padding: 30px;
-            margin-top: 50px;
             text-shadow: 1px 1px 2.5px black;
             text-align: justify;
         }
 
         button {
-            margin: 15px auto;
+            margin: 0px auto 20px;
             border: 2px solid;
             border-radius: 2px;
-            padding: 10px;
+            padding: 5px;
+            color: white;
             background: #5959597d;
-            font-size: 25px;
+            font-size: 21px;
             transition: 0.4s ease-in-out;
             display: flex;
             justify-content: center;
-            width: 55%;
+            width: 45%;
+            outline: none;
             cursor: pointer;
 
             &:hover {
                 color: $globalhover;
-                border-color: rgb(143, 143, 143);
+                border-color: #8f8f8f;
             }
         }
 
