@@ -69,22 +69,27 @@ export default {
         {
           name: "Малага",
           link: "/",
+          btn: ""
         },
         {
           name: "За Нас",
           link: "/sample",
+          btn: ""
         },
         {
           name: "Услуги",
           link: "/",
+          btn: ""
         },
         {
           name: "Мени",
           link: "/",
+          btn: ""
         },
         {
           name: "Контакт",
           link: "/contact",
+          btn: ""
         },
       ],
       title: "Maison Cacao",

@@ -6,7 +6,7 @@
           <span v-text="value.name" />
           <span><img :src="value.img" /></span>
           <div v-text="value.txt" />
-          <h1 v-text="value.btn" />
+          <button v-text="value.btn" />
         </router-link>
       </li>
     </ul>
