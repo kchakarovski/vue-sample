@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="produkt-flex">
+    <div class="produkt-flex" id="scroll">
       <h1 v-text="selectedData.produkti"></h1>
       <!-- <p v-text="selectedData.txt"></p> -->
       <div
@@ -48,12 +48,12 @@
 </template>
 
 <script>
-import {produkti} from "../data/produkti";
+import {malaga} from "../data/produkti";
 export default {
   name: "page",
   data() {
     return {
-      produkti,
+      malaga,
       slug: "",
       selectedData: [],
     };
