@@ -2,7 +2,7 @@ export const main = [
     {
       name: "Пијалоци",
       link: "/produkti/pijaloci",
-      //  img: "",
+        img: "https://i.ibb.co/3vx908b/drinks.png",
       txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla bla ipsum bla bla ipsum bla lorem ipsum ipsum lorem",
       btn: "Read More",
     },

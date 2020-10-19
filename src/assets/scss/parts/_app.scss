@@ -1,11 +1,13 @@
 * {
   font-family: sans-serif;
 }
+
 .app {
   margin-top: 10px;
   // padding: 30px;
 }
-.bgimg{
+
+.bgimg {
   background-image: url("https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -14,6 +16,7 @@
   min-height: 730px;
 
 }
+
 .main-flex {
   display: flex;
   // justify-content: space-evenly;
@@ -28,14 +31,18 @@ a {
   text-decoration: none;
   color: white;
 }
-.fade-enter, .fade-leave{
+
+.fade-enter,
+.fade-leave {
   opacity: 0;
   transform: translateX(2em);
 }
 
-.fade-enter-active, .fade-leave-active{
+.fade-enter-active,
+.fade-leave-active {
   transition: all .9s ease;
 }
-.flip-list-move{
+
+.flip-list-move {
   transition: transform 1s;
 }

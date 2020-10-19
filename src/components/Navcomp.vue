@@ -3,8 +3,8 @@
     <ul class="main-flex">
       <li class="main-flex__item" v-for="(value, key) in inputData" :key="key">
         <router-link :to="value.link">
-          <span v-text="value.img" />
           <span v-text="value.name" />
+          <span><img :src="value.img" /></span>
           <div v-text="value.txt" />
           <h1 v-text="value.btn" />
         </router-link>
