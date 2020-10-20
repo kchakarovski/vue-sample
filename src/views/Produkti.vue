@@ -9,7 +9,7 @@
         v-for="(value, key) in selectedData.produkt"
         :key="key"
       >
-        <img :src="value.img" />
+        <img id="pijalocimg" :src="value.img" />
         <span v-text="value.ime"></span>
         <span v-text="value.cena"></span>
         <span v-text="value.sostav"></span>
@@ -21,21 +21,29 @@
             <span v-text="value.sostav"></span>
           </div>
         </div>
-        <div class="burgeri__item" v-for="(value, key) in value.burgeri" :key="key">
-          <img :src="value.img" />
-          <span v-text="value.ime"></span>
-          <span v-text="value.cena"></span>
-          <span v-text="value.sostav"></span>
+        <div id="burgeri">
+          <div
+            class="burgeri__item"
+            v-for="(value, key) in value.burgeri"
+            :key="key"
+          >
+            <img :src="value.img" />
+            <span v-text="value.ime"></span>
+            <span v-text="value.cena"></span>
+            <span v-text="value.sostav"></span>
+          </div>
         </div>
-        <div
-          class="ladnisendvici__item"
-          v-for="(value, key) in value.ladnisendvici"
-          :key="key"
-        >
-          <img :src="value.img" />
-          <span v-text="value.ime"></span>
-          <span v-text="value.cena"></span>
-          <span v-text="value.sostav"></span>
+        <div id="ladnisendvici">
+          <div
+            class="ladnisendvici__item"
+            v-for="(value, key) in value.ladnisendvici"
+            :key="key"
+          >
+            <img :src="value.img" />
+            <span v-text="value.ime"></span>
+            <span v-text="value.cena"></span>
+            <span v-text="value.sostav"></span>
+          </div>
         </div>
         <div v-for="(value, key) in value.deserti" :key="key">
           <span v-text="value.ime"></span>

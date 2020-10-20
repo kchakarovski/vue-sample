@@ -9,14 +9,14 @@ export const main = [
     {
       name: "Брза Храна",
       link: "/produkti/brza-hrana",
-      // img: "",
+      img: "https://i.ibb.co/tQVyxcQ/food.png",
       txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
       btn: "Read More",
     },
     {
       name: "Десерти",
       link: "/produkti/deserti",
-      // img: "",
+      img: "https://i.ibb.co/Wk29bwv/desserts.png",
       txt: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla ipsum bla bla ipsum bla bla lorem ipsum ipsum lorem",
       btn: "Read More",
     },
