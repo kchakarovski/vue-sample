@@ -2,7 +2,7 @@
   <div>
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
-        <img class="sliderImg" :src="currentImg" />
+        <img :src="currentImg" class="sliderImages" />
       </div>
     </transition-group>
   </div>
@@ -13,7 +13,10 @@ export default {
   name: "Slider",
   data() {
     return {
-      slider: ["", ""],
+      sliderImages: [
+        "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
+        "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
+      ],
       timer: null,
       currentIndex: 0,
     };
@@ -40,7 +43,7 @@ export default {
   },
   computed: {
     currentImg() {
-      return this.slider[Math.abs(this.currentIndex) % this.slider.length];
+      return this.sliderImages[Math.abs(this.currentIndex) % this.sliderImages.length];
     },
   },
 };

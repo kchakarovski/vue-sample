@@ -61,6 +61,7 @@
             justify-content: center;
             margin: 60px;
             transition: 0.7s ease-in-out;
+            z-index: 99;
 
             &:hover {
                 background: #161f28ed;

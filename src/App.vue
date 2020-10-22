@@ -1,8 +1,8 @@
 <template>
   <div class="app">
     <div class="bgimg">
+      <slider :inputData="sliderImages" />
       <div id="header">
-        <slider :inputData="main" />
         <navcomp :inputData="header"></navcomp>
       </div>
       <div class="main-navigation">
@@ -40,6 +40,10 @@ export default {
   data() {
     return {
       main,
+      sliderImages:[
+        "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
+        "https://i.ibb.co/2SvXnwQ/164-1645988-wallpaper-burger-food-fast-food-burger-special.jpg"
+      ],
       footernav: {
         name: "Copyright © 2020 Cakarovski | Contact",
         link: "mailto:cakarovskidev@gmail.com",
