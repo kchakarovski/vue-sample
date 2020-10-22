@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="products">
     <div class="produkt-flex">
       <h1 v-text="selectedData.produkti"></h1>
       <!-- <p v-text="selectedData.txt"></p> -->

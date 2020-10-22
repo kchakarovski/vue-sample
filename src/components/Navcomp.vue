@@ -6,7 +6,8 @@
           <span v-text="value.name" />
           <img :src="value.img" />
           <div v-text="value.txt" />
-          <button v-text="value.btn" />
+
+          <button @click="scroll('products')" v-text="value.btn" />
         </router-link>
       </li>
     </ul>
@@ -41,6 +42,11 @@ export default {
           },
         ];
       },
+    },
+  },
+  methods: {
+    scroll(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     },
   },
 };
