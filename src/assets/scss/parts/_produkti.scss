@@ -5,15 +5,10 @@
   /* align-items: flex-end; */
   
   #pijalocimg{
-    // margin-right: 50%;
     width: 200px;
-    border-radius: 100%;
-    img{
-      width: 100px;
-    }
+    border-radius: 100%;   
 }
   &__item {
-    display: flex;
     color: gray;
     border-top: 1px solid;
     border-bottom: 1px solid;
@@ -36,20 +31,40 @@
     &__item {
       padding: 29px;
       display: flex;
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+      &:first-child{
+        border-top: unset;
+      }
       img{
         width: 200px;
         border-radius: 100%;
         display: flex;
       }
       span{
-        left: 30%;
+        left: 20%;
       }
     }
   }
 }
 
 #burgeri{
-  display: none;
+  .burgeri{
+    &__item {
+      padding: 29px;
+      display: flex;
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+      img{
+        width: 200px;
+        border-radius: 100%;
+        display: flex;
+      }
+      span{
+        left: 20%;
+      }
+    }
+  }
 }
 
 #ladnisendvici{

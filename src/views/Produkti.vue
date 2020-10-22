@@ -175,7 +175,7 @@ export default {
                 {
                   ime: "Маргарита - ",
                   cena: "120 / 220 Ден ",
-                  sostav: "доматен сос, кашкавал",
+                  sostav: " доматен сос, кашкавал",
                   img:
                     "https://5.imimg.com/data5/TK/WQ/GLADMIN-69655639/1-500x500.png",
                 },
@@ -239,7 +239,7 @@ export default {
                   sostav:
                     "100г фалафел плескавица, рукола, сос од павлака, кромид, домат",
                   img:
-                    "https://chowhound1.cbsistatic.com/assets/2015/02/31319_falafel_burgers.jpg",
+                    "https://www.minamade.com/wp-content/uploads/2018/06/Burger-Falafel-vegan-taco.jpg",
                 },
                 {
                   ime: "Џуси Луси - ",

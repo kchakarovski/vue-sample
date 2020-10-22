@@ -2,6 +2,7 @@
   <div class="app">
     <div class="bgimg">
       <div id="header">
+        <slider :inputData="main" />
         <navcomp :inputData="header"></navcomp>
       </div>
       <div class="main-navigation">
@@ -27,12 +28,14 @@
 // import FooterNav from "../src/components/FooterNav";
 import Navcomp from "../src/components/Navcomp";
 import {main} from "../src/data/menu";
+import Slider from "../src/components/Slider";
 export default {
   name: "App",
   components: {
     // "app-header": Header,
     // FooterNav,
     Navcomp,
+    Slider,
   },
   data() {
     return {
