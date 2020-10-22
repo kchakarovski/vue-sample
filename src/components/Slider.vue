@@ -19,7 +19,13 @@ export default {
   },
   props: {
     inputData: {
-      type: Array,
+      type: Array
+    },
+    timerMs: {
+      type: Number,
+      default: () => {
+        return 10000;
+      },
     },
   },
   mounted: function () {
@@ -27,7 +33,7 @@ export default {
   },
   methods: {
     startSlide() {
-      this.timer = setInterval(this.next, 10000);
+      this.timer = setInterval(this.next, this.timerMs);
     },
 
     next() {
