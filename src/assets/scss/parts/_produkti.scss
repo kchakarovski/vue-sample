@@ -1,42 +1,72 @@
 .produkt-flex {
   display: flex;
-  margin: 40px;
+  margin: 20px;
   flex-direction: column;
   /* align-items: flex-end; */
-  span {
-    display: flex;
-    align-items: center;
-  }
-  img {
-    display: flex;
-    margin-right: 50%;
+  
+  #pijalocimg{
     width: 200px;
-    border-radius: 100%;
-  }
+    border-radius: 100%;   
+}
   &__item {
     color: gray;
     border-top: 1px solid;
     border-bottom: 1px solid;
-    padding: 10%;
-    display: flex;
-    text-align: right;
+    padding: 3%;
     font-size: 22px;
-    justify-content: space-evenly;
-    width: 79%;
     transition: 0.7s ease-in-out;
     &:hover {
       color: red;
     }
+    span {
+      align-self: center;
+      position: relative;
+      left: 50%;
+    }
   }
 }
 #pici {
-  img {
-  }
-  .produkt-flex {
-    display: unset;
+
+  .pici {
     &__item {
-      padding: 0px;
-      justify-content: unset;
+      padding: 29px;
+      display: flex;
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+      &:first-child{
+        border-top: unset;
+      }
+      img{
+        width: 200px;
+        border-radius: 100%;
+        display: flex;
+      }
+      span{
+        left: 20%;
+      }
     }
   }
+}
+
+#burgeri{
+  .burgeri{
+    &__item {
+      padding: 29px;
+      display: flex;
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+      img{
+        width: 200px;
+        border-radius: 100%;
+        display: flex;
+      }
+      span{
+        left: 20%;
+      }
+    }
+  }
+}
+
+#ladnisendvici{
+  display: none;
 }

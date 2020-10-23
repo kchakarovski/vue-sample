@@ -3,10 +3,11 @@
     <ul class="main-flex">
       <li class="main-flex__item" v-for="(value, key) in inputData" :key="key">
         <router-link :to="value.link">
-          <span v-text="value.img" />
           <span v-text="value.name" />
+          <img :src="value.img" />
           <div v-text="value.txt" />
-          <h1 v-text="value.btn" />
+
+          <button @click="scroll('products')" v-text="value.btn" />
         </router-link>
       </li>
     </ul>
@@ -41,6 +42,11 @@ export default {
           },
         ];
       },
+    },
+  },
+  methods: {
+    scroll(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     },
   },
 };

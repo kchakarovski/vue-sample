@@ -1,89 +1,47 @@
 * {
   font-family: sans-serif;
 }
+
 .app {
   margin-top: 10px;
   // padding: 30px;
 }
-.bgimg{
-  background-image: url("https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
+.bgimg {
+  // background-image: url("https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
   overflow: hidden;
-  min-height: 730px;
+  // min-height: 730px;
 
 }
+
 .main-flex {
   display: flex;
-  // justify-content: space-evenly;
 
   &__item {
     display: flex;
     cursor: pointer;
   }
 }
-#main{
-  .main-flex{
-  &__item {
-    background: #161f2896;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 60px;
-    transition: 0.7s ease-in-out;
-    &:hover{
-      background: #161f28de;
-    }
-  }
-  span{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 30px;
-    font-size: 35px;
-  }
-  div{
-    color: darkgray;
-    text-transform: none;
-    padding: 15px;
-    margin-top: 50px;
-    text-shadow: 1px 1px 2.5px black;
-  }
-  h1{
-    margin: 15px auto;
-    border: 2px solid;
-    border-radius: 2px;
-    padding: 10px;
-    background: #5959597d;
-    font-size: 25px;
-    transition: 0.4s ease-in-out;
-    display: flex;
-    justify-content: center;
-    width: 55%;
-    cursor: pointer;
-    &:hover{
-      color:$globalhover;
-      border-color: rgb(143, 143, 143);
-    }
-  }
-  }
-  a{
-    cursor: default;
-  }
-}
+
 a {
   text-decoration: none;
   color: white;
 }
-.fade-enter, .fade-leave{
+
+.fade-enter,
+.fade-leave {
   opacity: 0;
   transform: translateX(2em);
 }
 
-.fade-enter-active, .fade-leave-active{
+.fade-enter-active,
+.fade-leave-active {
   transition: all .9s ease;
 }
-.flip-list-move{
+
+.flip-list-move {
   transition: transform 1s;
 }
