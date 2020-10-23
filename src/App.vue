@@ -25,8 +25,6 @@
   </div>
 </template>
 <script>
-// import Header from "../src/components/Header";
-// import FooterNav from "../src/components/FooterNav";
 import Navcomp from "../src/components/Navcomp";
 import { main } from "../src/data/menu";
 import Slider from "../src/components/Slider";
@@ -34,7 +32,6 @@ export default {
   name: "App",
   components: {
     // "app-header": Header,
-    // FooterNav,
     Navcomp,
     Slider,
   },

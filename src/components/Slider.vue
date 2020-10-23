@@ -35,7 +35,6 @@ export default {
     startSlide() {
       this.timer = setInterval(this.next, this.timerMs);
     },
-
     next() {
       this.currentIndex += 1;
     },
