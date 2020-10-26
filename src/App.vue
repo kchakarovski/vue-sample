@@ -53,16 +53,16 @@ export default {
           link: "/sample",
           btn: "",
         },
-        {
-          name: "Услуги",
-          link: "/",
-          btn: "",
-        },
-        {
-          name: "Мени",
-          link: "/",
-          btn: "",
-        },
+        // {
+        //   name: "Услуги",
+        //   link: "/",
+        //   btn: "",
+        // },
+        // {
+        //   name: "Мени",
+        //   link: "/",
+        //   btn: "",
+        // },
         {
           name: "Контакт",
           link: "/contact",

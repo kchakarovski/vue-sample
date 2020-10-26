@@ -55,14 +55,14 @@
   </div>
 </template>
 <script>
-import {malaga} from "../data/produkti";
+import { malaga } from "../data/produkti";
 export default {
   name: "page",
   data() {
     return {
       slug: "",
       selectedData: [],
-      main: malaga,  // -----
+      main: malaga, // -----
     };
   },
   watch: {

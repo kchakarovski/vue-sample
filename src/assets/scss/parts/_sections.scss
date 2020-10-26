@@ -49,7 +49,10 @@
         }
     }
 
-    .main-flex__item:nth-child(5) {
+    // .main-flex__item:nth-child(5) {
+    //     border-right: none;
+    // }
+    .main-flex__item:last-child {
         border-right: none;
     }
 }
@@ -63,6 +66,7 @@
             margin: 60px;
             transition: 0.7s ease-in-out;
             z-index: 99;
+            flex-direction: column;
 
             &:hover {
                 background: #161f28ed;
@@ -79,6 +83,7 @@
             justify-content: center;
             position: relative;
             font-size: 35px;
+            color: $tertiary;
         }
 
         img {
