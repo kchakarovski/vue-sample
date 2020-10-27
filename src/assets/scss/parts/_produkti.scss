@@ -3,11 +3,12 @@
   margin: 20px;
   flex-direction: column;
   /* align-items: flex-end; */
-  
-  #pijalocimg{
+
+  #pijalocimg {
     width: 200px;
-    border-radius: 100%;   
-}
+    border-radius: 100%;
+  }
+
   &__item {
     color: gray;
     border-top: 1px solid;
@@ -15,9 +16,11 @@
     padding: 3%;
     font-size: 22px;
     transition: 0.7s ease-in-out;
+
     &:hover {
       color: red;
     }
+
     span {
       align-self: center;
       position: relative;
@@ -25,6 +28,7 @@
     }
   }
 }
+
 #pici {
 
   .pici {
@@ -33,40 +37,45 @@
       display: flex;
       border-bottom: 1px solid;
       border-top: 1px solid;
-      &:first-child{
+
+      &:first-child {
         border-top: unset;
       }
-      img{
+
+      img {
         width: 200px;
         border-radius: 100%;
         display: flex;
       }
-      span{
+
+      span {
         left: 20%;
       }
     }
   }
 }
 
-#burgeri{
-  .burgeri{
+#burgeri {
+  .burgeri {
     &__item {
       padding: 29px;
       display: flex;
       border-bottom: 1px solid;
       border-top: 1px solid;
-      img{
+
+      img {
         width: 200px;
         border-radius: 100%;
         display: flex;
       }
-      span{
+
+      span {
         left: 20%;
       }
     }
   }
 }
 
-#ladnisendvici{
+#ladnisendvici {
   display: none;
 }

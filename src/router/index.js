@@ -1,9 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 import Contact from "../views/Contact.vue";
 import Sample from "../views/Sample.vue";
-import Blog from "../views/Blog.vue";
 import Concept from "../views/Concept.vue";
 import TransitionName from "../views/TransitionName.vue";
 import Produkti from "../views/Produkti.vue";
@@ -13,11 +11,6 @@ import Produkti from "../views/Produkti.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
   {
     path: "/produkti/:slug",
     name: "Produkti",
@@ -41,11 +34,6 @@ const routes = [
     path: "/sample",
     name: "Sample",
     component: Sample,
-  },
-  {
-    path: "/blog",
-    name: "Blog",
-    component: Blog,
   },
   {
     path: "/concept",

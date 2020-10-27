@@ -43,12 +43,16 @@
         font-size: 25px;
         border-right: none;
         cursor: default;
-        &span{
+
+        &span {
             cursor: pointer;
         }
     }
 
-    .main-flex__item:nth-child(5) {
+    // .main-flex__item:nth-child(5) {
+    //     border-right: none;
+    // }
+    .main-flex__item:last-child {
         border-right: none;
     }
 }
@@ -62,6 +66,7 @@
             margin: 60px;
             transition: 0.7s ease-in-out;
             z-index: 99;
+            flex-direction: column;
 
             &:hover {
                 background: #161f28ed;
@@ -78,6 +83,7 @@
             justify-content: center;
             position: relative;
             font-size: 35px;
+            color: $tertiary;
         }
 
         img {
@@ -120,5 +126,31 @@
 
     a {
         cursor: default;
+    }
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 5px;
+
+    .main-flex {
+        justify-content: center;
+
+        &__item {
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 2px 1px 2px black;
+        }
+    }
+
+    span {
+        text-shadow: 2px 1.3px 1px black;
+        transition: 0.7s;
+
+        &:hover {
+            color: $globalhover;
+        }
     }
 }
