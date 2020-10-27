@@ -1,22 +1,20 @@
 <template>
   <div class="app">
     <div class="bgimg">
-      <slider :inputData="sliderimages" />
+      <!-- <slider :inputData="sliderimages" /> -->
       <div id="header">
         <navcomp :inputData="header" />
       </div>
       <div class="main-navigation">
         <div id="main">
-          <ul>
-            <navcomp :inputData="main" />
-          </ul>
+          <card v-for="(card, key) in cards" :key="key" :inputData="card" />
         </div>
       </div>
     </div>
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
-    <slider :inputData="sliderimages" :timerMs="3000" />
+    <!-- <slider :inputData="sliderimages" :timerMs="3000" /> -->
     <footer>
       <div id="footer">
         <a :href="footernav.link"><span v-text="footernav.name"></span></a>
@@ -26,18 +24,20 @@
 </template>
 <script>
 import Navcomp from "../src/components/Navcomp";
-import { main } from "../src/data/menu";
-import Slider from "../src/components/Slider";
+import { cards } from "../src/data/cards";
+// import Slider from "../src/components/Slider";
+import Card from "../src/components/Card";
 export default {
   name: "App",
   components: {
     // "app-header": Header,
     Navcomp,
-    Slider,
+    // Slider,
+    Card,
   },
   data() {
     return {
-      main,
+      cards,
       sliderimages: [
         "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
         "https://i.ibb.co/2SvXnwQ/164-1645988-wallpaper-burger-food-fast-food-burger-special.jpg",

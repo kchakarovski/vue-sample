@@ -1,5 +1,6 @@
 <template>
   <div id="products">
+    <!-- <slider :inputData="sliderimages" :timerMs="3000" /> -->
     <div class="produkt-flex">
       <h1 v-text="selectedData.produkti"></h1>
       <!-- <p v-text="selectedData.txt"></p> -->
@@ -56,13 +57,21 @@
 </template>
 <script>
 import { malaga } from "../data/produkti";
+// import Slider from "../components/Slider";
 export default {
   name: "page",
+  components:{
+    // Slider,
+  },
   data() {
     return {
       slug: "",
       selectedData: [],
       main: malaga, // -----
+      sliderimages: [
+        "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
+        "https://i.ibb.co/2SvXnwQ/164-1645988-wallpaper-burger-food-fast-food-burger-special.jpg",
+      ],
     };
   },
   watch: {
