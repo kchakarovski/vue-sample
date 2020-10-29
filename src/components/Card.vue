@@ -5,14 +5,14 @@
         <h1 class="card__item--title" v-text="inputData.title" />
       </slot>
       <slot name="img">
-      <img
-        class="card__item--img"
-        :src="inputData.img"
-        :alt="inputData.description"
-      />
+        <img
+          class="card__item--img"
+          :src="inputData.img"
+          :alt="inputData.description"
+        />
       </slot>
       <slot name="description">
-      <p class="card__item--description" v-text="inputData.description" />
+        <p class="card__item--description" v-text="inputData.description" />
       </slot>
       <button
         class="card__item--btn"
