@@ -5,12 +5,28 @@
       <div id="header">
         <navcomp :inputData="header" />
       </div>
-        <div id="main">
-          <card v-for="(card, key) in cards" :key="key" :inputData="card" />
+        <div class="card">
+          <card 
+          v-for="(card, key) in cards" 
+          :key="key" 
+          :inputData="card"
+          @clickedButton="redirect"
+           />
         </div>
     </div>
     <transition name="fade" mode="out-in">
       <router-view />
+      <!-- <div class="card">
+          <card v-for="(card, key) in cards" 
+          :key="key" 
+          :inputData="card"
+          @clickedButton="notify"
+          >
+            <template v-slot:title>
+              <h3 v-text="card.title" />
+            </template>
+          </card>
+        </div> -->
     </transition>
     <!-- <slider :inputData="sliderimages" :timerMs="3000" /> -->
     <footer>
@@ -78,6 +94,15 @@ export default {
     change(msg) {
       this.message = msg;
     },
+    redirect(link){
+      this.$router.push(link);
+      document
+        .getElementById("products")
+        .scrollIntoView({ behavior: "smooth" });
+    },
+    notify(link){
+      alert(link);
+    }
   },
 };
 </script>

@@ -16,6 +16,7 @@
             flex-grow: 0.1;
             border-right: 2px solid white;
             transition: 0.4s ease-in-out;
+            cursor: default;
 
             &:hover {
                 border-right-color: $globalhover;
@@ -42,7 +43,6 @@
         display: flex;
         font-size: 25px;
         border-right: none;
-        cursor: default;
 
         &span {
             cursor: pointer;

@@ -1,25 +1,25 @@
-#main{
-    display: flex;
-}
 .card {
-    // display: flex;
-    // justify-content: center;
-    // transition: 0.7 ease-in-out;
+    display: flex;
+    justify-content: center;
+
     &__item {
         background: #161f28de;
         display: flex;
         justify-content: center;
         margin: 60px;
-        transition: 0.7 ease-in-out;
+        transition: 0.7s ease-in-out;
         flex-direction: column;
         z-index: 99;
         width: 300px;
-        &:hover{
-            background: #161f28ed;
-            img{
+
+        &:hover {
+            background: #161f28f7;
+
+            img {
                 box-shadow: 0px 0px 17px #5e5e5e;
             }
         }
+
         &--title {
             margin-top: 15px;
             display: flex;
@@ -33,8 +33,9 @@
             border-radius: 50%;
             display: block;
             margin: 15px auto 0px;
-            transition: 0.7 ease-in-out;
+            transition: 0.7s ease-in-out;
         }
+
         &--description {
             color: darkgray;
             text-transform: none;
@@ -56,11 +57,13 @@
             width: 45%;
             outline: none;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 color: $globalhover;
                 border-color: #8f8f8f;
             }
         }
+
         // a{
         //     cursor: default;
         // }
