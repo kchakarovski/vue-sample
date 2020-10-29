@@ -1,5 +1,6 @@
 .card {
     display: flex;
+    transition: 0.7 ease-in-out;
     &__item {
         background: #161f28de;
         display: flex;
@@ -15,19 +16,48 @@
             }
         }
         &--title {
-
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            font-size: 35px;
+            color: $tertiary;
         }
 
         &--img {
-
+            border-radius: 50%;
+            display: block;
+            margin: 15px auto 0px;
+            transition: 0.7 ease-in-out;
         }
-
         &--description {
-
+            color: darkgray;
+            text-transform: none;
+            padding: 30px;
+            text-shadow: 1px 1px 2.5px black;
+            text-align: justify;
         }
 
-        &--button {
-
+        &--btn {
+            margin: 0px auto 20px;
+            border: 2px solid;
+            border-radius: 2px;
+            padding: 5px;
+            color: $tertiary;
+            background: #5959597d;
+            font-size: 21px;
+            display: flex;
+            justify-content: center;
+            width: 45%;
+            outline: none;
+            cursor: pointer;
+            &:hover{
+                color: $globalhover;
+                border-color: #8f8f8f;
+            }
         }
+        // a{
+        //     cursor: default;
+        // }
     }
 }
