@@ -1,15 +1,13 @@
 <template>
   <div class="app">
     <div class="bgimg">
-      <!-- <slider :inputData="sliderimages" /> -->
+      <slider :inputData="sliderimages" />
       <div id="header">
         <navcomp :inputData="header" />
       </div>
-      <div class="main-navigation">
         <div id="main">
           <card v-for="(card, key) in cards" :key="key" :inputData="card" />
         </div>
-      </div>
     </div>
     <transition name="fade" mode="out-in">
       <router-view />
@@ -25,14 +23,14 @@
 <script>
 import Navcomp from "../src/components/Navcomp";
 import { cards } from "../src/data/cards";
-// import Slider from "../src/components/Slider";
+import Slider from "../src/components/Slider";
 import Card from "../src/components/Card";
 export default {
   name: "App",
   components: {
     // "app-header": Header,
     Navcomp,
-    // Slider,
+    Slider,
     Card,
   },
   data() {
