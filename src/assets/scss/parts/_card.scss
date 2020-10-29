@@ -1,6 +1,19 @@
 .card {
+    display: flex;
     &__item {
-        
+        background: #161f28de;
+        display: flex;
+        justify-content: center;
+        margin: 60px;
+        transition: 0.7 ease-in-out;
+        flex-direction: column;
+        z-index: 99;
+        &:hover{
+            background: #161f28ed;
+            img{
+                box-shadow: 0px 0px 17px #5e5e5e;
+            }
+        }
         &--title {
 
         }
