@@ -12,7 +12,7 @@
         <div class="row__item--price" v-text="inputData.price" />
       </slot>
       <slot name="btn">
-        <button v-text="inputData.btn" />
+        <button v-if="toggleView" @click="toggleviewClick" v-text="inputData.btn" />
       </slot>
     </div>
   </div>
@@ -21,6 +21,16 @@
 <script>
 export default {
   name: "row",
+  data(){
+    return{
+      toggleView: true,
+    }
+  },
+  methods:{
+    toggleviewClick(){
+      this.toggleView = !this.toggleView;
+    }
+  },
   props: {
     inputData: {
       type: Object,

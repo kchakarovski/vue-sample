@@ -1,0 +1,21 @@
+.row{ 
+    display: flex;
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        img{
+            flex: 0;
+            margin-left: 15px;
+        }
+        div{
+            flex: 3;
+            text-align: center;
+        }
+        button{
+            flex: 0;
+            margin-right: 15px;
+        }
+    }
+}

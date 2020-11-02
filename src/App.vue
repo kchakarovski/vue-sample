@@ -30,7 +30,9 @@
     </transition>
     <!-- <slider :inputData="sliderimages" :timerMs="3000" /> -->
     <footer>
+      <div id="row">
       <row :inputData="rows" />
+      </div>
       <div id="footer">
         <a :href="footernav.link"><span v-text="footernav.name"></span></a>
       </div>
