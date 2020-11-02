@@ -55,12 +55,14 @@ export default {
   data() {
     return {
       cards,
-      rows: {
+      rows:
+         {
         img:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-u3176imqyit3ACRlHzFj17hGTX6Qb1lBIQ&usqp=CAU",
         price: "Милк Шејк - 80 / 100 Ден",
         btn: "Hidden",
-      },
+      }
+      ,
       sliderimages: [
         "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
         "https://i.ibb.co/2SvXnwQ/164-1645988-wallpaper-burger-food-fast-food-burger-special.jpg",
