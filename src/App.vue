@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="bgimg">
-      <!-- <slider :inputData="sliderimages" /> -->
+      <slider :inputData="sliderimages" />
       <div id="header">
         <navcomp :inputData="header" />
       </div>
@@ -42,7 +42,7 @@
 <script>
 import Navcomp from "../src/components/Navcomp";
 import { cards } from "../src/data/cards";
-// import Slider from "../src/components/Slider";
+import Slider from "../src/components/Slider";
 import Card from "../src/components/Card";
 import Row from "../src/components/Row";
 export default {
@@ -50,7 +50,7 @@ export default {
   components: {
     // "app-header": Header,
     Navcomp,
-    // Slider,
+    Slider,
     Card,
     Row,
   },

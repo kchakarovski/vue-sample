@@ -12,7 +12,7 @@
         <div class="row__item--price" v-text="inputData.price" />
       </slot>
       <slot name="btn">
-        <button v-if="toggleView" @click="toggleviewClick" v-text="inputData.btn" />
+        <button class="row__item--btn" v-if="toggleView" @click="toggleviewClick" v-text="inputData.btn" />
       </slot>
     </div>
   </div>
