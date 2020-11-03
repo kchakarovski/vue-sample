@@ -16,6 +16,7 @@
             flex-grow: 0.1;
             border-right: 2px solid white;
             transition: 0.4s ease-in-out;
+            cursor: default;
 
             &:hover {
                 border-right-color: $globalhover;
@@ -42,7 +43,6 @@
         display: flex;
         font-size: 25px;
         border-right: none;
-        cursor: default;
 
         &span {
             cursor: pointer;
@@ -57,83 +57,83 @@
     }
 }
 
-#main {
-    .main-flex {
-        &__item {
-            background: #161f28de;
-            display: flex;
-            justify-content: center;
-            margin: 60px;
-            transition: 0.7s ease-in-out;
-            z-index: 99;
-            flex-direction: column;
+// #main {
+//     .main-flex {
+//         &__item {
+//             background: #161f28de;
+//             display: flex;
+//             justify-content: center;
+//             margin: 60px;
+//             transition: 0.7s ease-in-out;
+//             z-index: 99;
+//             flex-direction: column;
 
-            &:hover {
-                background: #161f28ed;
+//             &:hover {
+//                 background: #161f28ed;
 
-                img {
-                    box-shadow: 0px 0px 17px #5e5e5e;
-                }
-            }
-        }
+//                 img {
+//                     box-shadow: 0px 0px 17px #5e5e5e;
+//                 }
+//             }
+//         }
 
-        span {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            font-size: 35px;
-            color: $tertiary;
-        }
+//         span {
+//             margin-top: 15px;
+//             display: flex;
+//             justify-content: center;
+//             position: relative;
+//             font-size: 35px;
+//             color: $tertiary;
+//         }
 
-        img {
-            border-radius: 50%;
-            display: block;
-            margin: 15px auto 0px;
-            transition: 0.7s ease-in-out;
-        }
+//         img {
+//             border-radius: 50%;
+//             display: block;
+//             margin: 15px auto 0px;
+//             transition: 0.7s ease-in-out;
+//         }
 
-        div {
-            color: darkgray;
-            text-transform: none;
-            padding: 30px;
-            text-shadow: 1px 1px 2.5px black;
-            text-align: justify;
-        }
+//         div {
+//             color: darkgray;
+//             text-transform: none;
+//             padding: 30px;
+//             text-shadow: 1px 1px 2.5px black;
+//             text-align: justify;
+//         }
 
-        button {
-            margin: 0px auto 20px;
-            border: 2px solid;
-            border-radius: 2px;
-            padding: 5px;
-            color: white;
-            background: #5959597d;
-            font-size: 21px;
-            transition: 0.4s ease-in-out;
-            display: flex;
-            justify-content: center;
-            width: 45%;
-            outline: none;
-            cursor: pointer;
+//         button {
+//             margin: 0px auto 20px;
+//             border: 2px solid;
+//             border-radius: 2px;
+//             padding: 5px;
+//             color: white;
+//             background: #5959597d;
+//             font-size: 21px;
+//             transition: 0.4s ease-in-out;
+//             display: flex;
+//             justify-content: center;
+//             width: 45%;
+//             outline: none;
+//             cursor: pointer;
 
-            &:hover {
-                color: $globalhover;
-                border-color: #8f8f8f;
-            }
-        }
+//             &:hover {
+//                 color: $globalhover;
+//                 border-color: #8f8f8f;
+//             }
+//         }
 
-    }
+//     }
 
-    a {
-        cursor: default;
-    }
-}
+//     a {
+//         cursor: default;
+//     }
+// }
 
 #footer {
     display: flex;
     justify-content: center;
-    position: relative;
-    bottom: 5px;
+    padding: 10px;
+    width: 100%;
 
     .main-flex {
         justify-content: center;

@@ -1,17 +1,25 @@
 <template>
-  <div class="card__item">
-    <h1 class="card__item--title" v-text="inputData.title" />
-    <img
-      class="card__item--img"
-      :src="inputData.img"
-      :alt="inputData.description"
-    />
-    <p class="card__item--description" v-text="inputData.description" />
-    <button
-      class="card__item--btn"
-      @click="redirect(inputData.link)"
-      v-text="inputData.buttonText"
-    />
+  <div class="card">
+    <div class="card__item">
+      <slot name="title">
+        <h1 class="card__item--title" v-text="inputData.title" />
+      </slot>
+      <slot name="img">
+        <img
+          class="card__item--img"
+          :src="inputData.img"
+          :alt="inputData.description"
+        />
+      </slot>
+      <slot name="description">
+        <p class="card__item--description" v-text="inputData.description" />
+      </slot>
+      <button
+        class="card__item--btn"
+        @click="toggle(inputData.link)"
+        v-text="inputData.buttonText"
+      />
+    </div>
   </div>
 </template>
 
@@ -33,12 +41,9 @@ export default {
     },
   },
   methods: {
-    redirect(link) {
+    toggle(link) {
       //   document.getElementById(link).scrollIntoView({ behavior: "smooth" });
-      this.$router.push(link);
-      document
-        .getElementById("products")
-        .scrollIntoView({ behavior: "smooth" });
+      this.$emit("clickedButton", link);
     },
   },
 };
