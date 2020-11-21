@@ -1,7 +1,18 @@
 <template>
   <div class="products">
-    <div v-for="(value, key) in selectedData.produkt" :key="key">
-      
+    <div
+      class="products__item"
+      v-for="(value, key) in selectedData.produkt"
+      :key="key">
+      <slot name="title">
+        <div class="products__item--title" v-text="value.name" />
+      </slot>
+      <slot name="img">
+        <img :src="value.img" :alt="value.name" class="products__item--img" />
+      </slot>
+      <slot name="price">
+        <p class="products__item--price" v-text="value.price" />
+      </slot>
     </div>
   </div>
 </template>
@@ -9,8 +20,7 @@
 import { products } from "../data/produkti";
 export default {
   name: "page",
-  components:{
-  },
+  components: {},
   data() {
     return {
       slug: "",
@@ -29,5 +39,4 @@ export default {
   },
 };
 </script>
-
 <style></style>
