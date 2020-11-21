@@ -8,35 +8,37 @@ var products = [{
   // ПИЈАЛОЦИ ---------------------------------------------------------------
   link: "/produkti/pijaloci",
   produkt: [{
-    name: "Milk Shake",
-    price: "80",
-    ingredients: "",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-u3176imqyit3ACRlHzFj17hGTX6Qb1lBIQ&usqp=CAU"
-  }, {
-    name: "Esspresso",
-    price: "50",
-    ingredients: "",
-    img: "https://upload.wiknamedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/1200px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg"
-  }, {
-    name: "Esspresso",
-    price: "50",
-    ingredients: "",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEijBSSqSuE2a_HXzdChCyCpC2phzhmT1EjA&usqp=CAU"
-  }, {
-    name: "Esspresso",
-    price: "80",
-    ingredients: "",
-    img: "https://www.10wallpaper.com/wallpaper/2560x1440/1808/Casual_Cafe_Cappuccino_Coffee_Photography_2560x1440.jpg"
-  }, {
-    name: "Esspresso",
-    price: " 50 Ден",
-    ingredients: "",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTwLW0IH4VpJry7kPZTI6ZHFGGMcInONohmg&usqp=CAU"
-  }, {
-    name: "Esspresso",
-    price: "50",
-    ingredients: "",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIcyJ_0E6fMwL5PEr2Po8rqyf_DUbnhHJbiA&usqp=CAU"
+    drinks: [{
+      name: "Milk Shake",
+      price: "80",
+      ingredients: "",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-u3176imqyit3ACRlHzFj17hGTX6Qb1lBIQ&usqp=CAU"
+    }, {
+      name: "Esspresso",
+      price: "50",
+      ingredients: "",
+      img: "https://upload.wiknamedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/1200px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg"
+    }, {
+      name: "Esspresso",
+      price: "50",
+      ingredients: "",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEijBSSqSuE2a_HXzdChCyCpC2phzhmT1EjA&usqp=CAU"
+    }, {
+      name: "Esspresso",
+      price: "80",
+      ingredients: "",
+      img: "https://www.10wallpaper.com/wallpaper/2560x1440/1808/Casual_Cafe_Cappuccino_Coffee_Photography_2560x1440.jpg"
+    }, {
+      name: "Esspresso",
+      price: " 50 Ден",
+      ingredients: "",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTwLW0IH4VpJry7kPZTI6ZHFGGMcInONohmg&usqp=CAU"
+    }, {
+      name: "Esspresso",
+      price: "50",
+      ingredients: "",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIcyJ_0E6fMwL5PEr2Po8rqyf_DUbnhHJbiA&usqp=CAU"
+    }]
   }],
   txt: "",
   slug: "pijaloci"
@@ -45,7 +47,7 @@ var products = [{
   link: "/produkti/brza-hrana",
   produkt: [{
     // ПИЦИ -----------------------------
-    pici: [{
+    pizzas: [{
       name: "Esspresso",
       price: "120",
       ingredients: "доматен сос, кашкавал",
@@ -106,10 +108,10 @@ var products = [{
   link: "/produkti/deserti",
   // img: "",
   produkt: [{
-    deserti: [{
+    desserts: [{
       name: "Сладолед",
       price: "40",
-      ingredients: "Ванила / Чоколадо",
+      ingredients: "Ванила",
       img: ""
     }, {
       name: "Сладолед",

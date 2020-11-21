@@ -48,7 +48,7 @@ export const products = [{
     link: "/produkti/brza-hrana",
     produkt: [{
       // ПИЦИ -----------------------------
-      pici: [{
+      pizzas: [{
           name: "Esspresso",
           price: "120",
           ingredients: "доматен сос, кашкавал",
@@ -120,10 +120,10 @@ export const products = [{
     link: "/produkti/deserti",
     // img: "",
     produkt: [{
-      deserti: [{
+      desserts: [{
           name: "Сладолед",
           price: "40",
-          ingredients: "Ванила / Чоколадо",
+          ingredients: "Ванила",
           img: "",
         },
         {

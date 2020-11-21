@@ -1,81 +1,14 @@
-.produkt-flex {
-  display: flex;
-  margin: 20px;
-  flex-direction: column;
-  /* align-items: flex-end; */
-
-  #pijalocimg {
-    width: 200px;
-    border-radius: 100%;
-  }
-
-  &__item {
-    color: gray;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    padding: 3%;
-    transition: 0.7s ease-in-out;
-
-    &:hover {
-      color: red;
-    }
-
-    span {
-      align-self: center;
-      position: relative;
-      left: 50%;
-      font-size: 22px;
-    }
-  }
-}
-
-#pici {
-
-  .pici {
+.products {
+  &__row {
     &__item {
-      padding: 29px;
-      display: flex;
-      border-bottom: 1px solid;
-      border-top: 1px solid;
-
-      &:first-child {
-        border-top: unset;
+      &--title {
+        font-size: 27px;
       }
+      &--img {}
 
-      img {
-        width: 200px;
-        border-radius: 100%;
-        display: flex;
-      }
+      &--price {}
 
-      span {
-        left: 20%;
-      }
+      &--ingredients {}
     }
   }
-}
-
-#burgeri {
-  .burgeri {
-    &__item {
-      padding: 29px;
-      display: flex;
-      border-bottom: 1px solid;
-      border-top: 1px solid;
-
-      img {
-        width: 200px;
-        border-radius: 100%;
-        display: flex;
-      }
-
-      span {
-        left: 20%;
-      }
-    }
-  }
-}
-
-#ladnisendvici {
-  display: none;
 }
