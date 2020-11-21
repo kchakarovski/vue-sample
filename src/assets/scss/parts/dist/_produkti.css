@@ -1,3 +1,12 @@
 .products__row__item--title {
-  font-size: 27px;
+  color: orange;
+}
+.products__row__item--img {
+  width: 100px;
+}
+.products__row__item--price {
+  color: red;
+}
+.products__row__item--ingredients {
+  color: darkmagenta;
 }

@@ -2,13 +2,20 @@
   &__row {
     &__item {
       &--title {
-        font-size: 27px;
+        color: orange;
       }
-      &--img {}
 
-      &--price {}
+      &--img {
+        width: 100px;
+      }
 
-      &--ingredients {}
+      &--price {
+        color: red;
+      }
+
+      &--ingredients {
+        color: darkmagenta;
+      }
     }
   }
 }
