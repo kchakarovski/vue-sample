@@ -16,34 +16,57 @@
           <div class="products__row__item--title" v-text="value.name" />
         </slot>
         <slot name="img">
-          <img :src="value.img" :alt="value.name" class="products__row__item--img" />
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
         </slot>
         <slot name="price">
           <p class="products__row__item--price" v-text="value.price" />
         </slot>
       </div>
       <!-- 3RD LOOP FOR FAST FOOD -->
-      <div v-for="(value, key) in value.pizzas" :key="key">
+      <div
+        class="products__row__item"
+        v-for="(value, key) in value.pizzas"
+        :key="key"
+      >
         <slot name="title">
           <div class="products__row__item--title" v-text="value.name" />
         </slot>
         <slot name="img">
-          <img :src="value.img" :alt="value.name" class="products__row__item--img" />
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
         </slot>
         <slot name="price">
           <p class="products__row__item--price" v-text="value.price" />
         </slot>
         <slot name="ingredients">
-          <p class="products__row__item--ingredients" v-text="value.ingredients" />
+          <p
+            class="products__row__item--ingredients"
+            v-text="value.ingredients"
+          />
         </slot>
       </div>
       <!-- 4TH LOOP FOR DESSERTS -->
-      <div v-for="(value, key) in value.desserts" :key="key">
+      <div
+        class="products__row__item"
+        v-for="(value, key) in value.desserts"
+        :key="key"
+      >
         <slot name="title">
           <div class="products__row__item--title" v-text="value.name" />
         </slot>
         <slot name="img">
-          <img :src="value.img" :alt="value.name" class="products__row__item--img" />
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
         </slot>
         <slot name="price">
           <p class="products__row__item--price" v-text="value.price" />
