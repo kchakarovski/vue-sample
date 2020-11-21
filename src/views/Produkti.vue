@@ -3,7 +3,6 @@
     <!-- <slider :inputData="sliderimages" :timerMs="3000" /> -->
     <div class="produkt-flex">
       <h1 v-text="selectedData.produkti"></h1>
-      <!-- <p v-text="selectedData.txt"></p> -->
       <div
         id="pijaloci"
         class="produkt-flex__item"
@@ -13,13 +12,12 @@
         <img id="pijalocimg" :src="value.img" />
         <span v-text="value.ime"></span>
         <span v-text="value.cena"></span>
-        <span v-text="value.sostav"></span>
+        
         <div id="pici">
           <div class="pici__item" v-for="(value, key) in value.pici" :key="key">
             <img :src="value.img" />
             <span v-text="value.ime"></span>
             <span v-text="value.cena"></span>
-            <span v-text="value.sostav"></span>
           </div>
         </div>
         <div id="burgeri">
@@ -31,7 +29,6 @@
             <img :src="value.img" />
             <span v-text="value.ime"></span>
             <span v-text="value.cena"></span>
-            <span v-text="value.sostav"></span>
           </div>
         </div>
         <div id="ladnisendvici">
@@ -43,13 +40,11 @@
             <img :src="value.img" />
             <span v-text="value.ime"></span>
             <span v-text="value.cena"></span>
-            <span v-text="value.sostav"></span>
           </div>
         </div>
         <div v-for="(value, key) in value.deserti" :key="key">
           <span v-text="value.ime"></span>
           <span v-text="value.cena"></span>
-          <span v-text="value.sostav"></span>
         </div>
       </div>
     </div>
