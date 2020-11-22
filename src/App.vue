@@ -1,4 +1,4 @@
-`<template>
+<template>
   <div class="app">
     <div class="bgimg">
       <slider :inputData="sliderimages" />
@@ -28,14 +28,14 @@
 import Navigation from "../src/components/Navigation";
 import Slider from "../src/components/Slider";
 import Card from "../src/components/Card";
-import { cards } from "../src/data/cards"; // DATA 
+import { cards } from "../src/data/cards"; // DATA
 export default {
   name: "App",
   components: {
     // "app-header": Header,
     Navigation,
     Slider,
-    Card
+    Card,
   },
   data() {
     return {

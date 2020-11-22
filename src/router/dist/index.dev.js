@@ -11,8 +11,6 @@ var _vueRouter = _interopRequireDefault(require("vue-router"));
 
 var _Contact = _interopRequireDefault(require("../views/Contact.vue"));
 
-var _Sample = _interopRequireDefault(require("../views/Sample.vue"));
-
 var _TransitionName = _interopRequireDefault(require("../views/TransitionName.vue"));
 
 var _Produkti = _interopRequireDefault(require("../views/Produkti.vue"));
@@ -48,10 +46,6 @@ var routes = [{
   path: "/contact",
   name: "Contact",
   component: _Contact["default"]
-}, {
-  path: "/sample",
-  name: "Sample",
-  component: _Sample["default"]
 }, {
   path: "/transition-name",
   name: "TransitionName",

@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Contact from "../views/Contact.vue";
-import Sample from "../views/Sample.vue";
 import TransitionName from "../views/TransitionName.vue";
 import Produkti from "../views/Produkti.vue";
 // import Header from "../compoents/Header.vue";
@@ -28,11 +27,6 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
-  },
-  {
-    path: "/sample",
-    name: "Sample",
-    component: Sample,
   },
   {
     path: "/transition-name",
