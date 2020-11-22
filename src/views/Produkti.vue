@@ -1,77 +1,116 @@
 <template>
-  <div id="products">
-    <!-- <slider :inputData="sliderimages" :timerMs="3000" /> -->
-    <div class="produkt-flex">
-      <h1 v-text="selectedData.produkti"></h1>
-      <!-- <p v-text="selectedData.txt"></p> -->
+  <div class="products">
+    <!-- FIRST LOOP FOR THE ROW -->
+    <div
+      class="products__row"
+      v-for="(value, key) in selectedData.produkt"
+      :key="key"
+    >
+      <!-- 2ND LOOP FOR DRINKS -->
       <div
-        id="pijaloci"
-        class="produkt-flex__item"
-        v-for="(value, key) in selectedData.produkt"
+        class="products__row__item"
+        v-for="(value, key) in value.drinks"
         :key="key"
       >
-        <img id="pijalocimg" :src="value.img" />
-        <span v-text="value.ime"></span>
-        <span v-text="value.cena"></span>
-        <span v-text="value.sostav"></span>
-        <div id="pici">
-          <div class="pici__item" v-for="(value, key) in value.pici" :key="key">
-            <img :src="value.img" />
-            <span v-text="value.ime"></span>
-            <span v-text="value.cena"></span>
-            <span v-text="value.sostav"></span>
-          </div>
-        </div>
-        <div id="burgeri">
-          <div
-            class="burgeri__item"
-            v-for="(value, key) in value.burgeri"
-            :key="key"
-          >
-            <img :src="value.img" />
-            <span v-text="value.ime"></span>
-            <span v-text="value.cena"></span>
-            <span v-text="value.sostav"></span>
-          </div>
-        </div>
-        <div id="ladnisendvici">
-          <div
-            class="ladnisendvici__item"
-            v-for="(value, key) in value.ladnisendvici"
-            :key="key"
-          >
-            <img :src="value.img" />
-            <span v-text="value.ime"></span>
-            <span v-text="value.cena"></span>
-            <span v-text="value.sostav"></span>
-          </div>
-        </div>
-        <div v-for="(value, key) in value.deserti" :key="key">
-          <span v-text="value.ime"></span>
-          <span v-text="value.cena"></span>
-          <span v-text="value.sostav"></span>
-        </div>
+        <slot name="title">
+          <div class="products__row__item--title" v-text="value.name" />
+        </slot>
+        <slot name="img">
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
+        </slot>
+        <slot name="price">
+          <p class="products__row__item--price" v-text="value.price" />
+        </slot>
+      </div>
+      <!-- 3RD LOOP FOR FAST FOOD ( PIZZAS ) -->
+      <div
+        class="products__row__item"
+        v-for="(value, key) in value.pizzas"
+        :key="key"
+      >
+        <slot name="title">
+          <div class="products__row__item--title" v-text="value.name" />
+        </slot>
+        <slot name="img">
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
+        </slot>
+        <slot name="ingredients">
+          <p
+            class="products__row__item--ingredients"
+            v-text="value.ingredients"
+          />
+        </slot>
+        <slot name="price">
+          <p class="products__row__item--price" v-text="value.price" />
+        </slot>
+      </div>
+      <!-- 4TH LOOP FOR FAST FOOD ( BURGERS ) -->
+      <div
+        class="products__row__item"
+        v-for="(value, key) in value.burgers"
+        :key="key"
+      >
+        <slot name="title">
+          <div class="products__row__item--title" v-text="value.name" />
+        </slot>
+        <slot name="img">
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
+        </slot>
+        <slot name="ingredients">
+          <p
+            class="products__row__item--ingredients"
+            v-text="value.ingredients"
+          />
+        </slot>
+        <slot name="price">
+          <p class="products__row__item--price" v-text="value.price" />
+        </slot>
+      </div>
+      <!-- 5TH LOOP FOR DESSERTS -->
+      <div
+        class="products__row__item"
+        v-for="(value, key) in value.desserts"
+        :key="key"
+      >
+        <slot name="title">
+          <div class="products__row__item--title" v-text="value.name" />
+        </slot>
+        <slot name="img">
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
+        </slot>
+        <slot name="price">
+          <p class="products__row__item--price" v-text="value.price" />
+        </slot>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { malaga } from "../data/produkti";
-// import Slider from "../components/Slider";
+import { products } from "../data/produkti";
 export default {
   name: "page",
-  components:{
-    // Slider,
-  },
+  components: {},
   data() {
     return {
       slug: "",
       selectedData: [],
-      main: malaga, // -----
-      sliderimages: [
-        "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
-        "https://i.ibb.co/2SvXnwQ/164-1645988-wallpaper-burger-food-fast-food-burger-special.jpg",
-      ],
+      main: products, // -----
     };
   },
   watch: {
@@ -81,11 +120,8 @@ export default {
           this.selectedData = element;
         }
       });
-      // react to route changes...
-      //   this.title = to.params.slug;
     },
   },
 };
 </script>
-
 <style></style>

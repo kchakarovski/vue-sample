@@ -1,6 +1,20 @@
 * {
   font-family: sans-serif;
 }
+
+.app {
+  margin-top: 10px;
+}
+
+.bgimg {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .fade-enter,
 .fade-leave {
   opacity: 0;
@@ -9,7 +23,7 @@
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: all .9s ease;
+  transition: all 0.9s ease;
 }
 
 .flip-list-move {
