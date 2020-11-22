@@ -1,12 +1,12 @@
   <template>
-  <div class="navigation">
-    <ul class="main-flex">
-      <li class="main-flex__item" v-for="(value, key) in inputData" :key="key">
-        <router-link :to="value.link">
-          <span v-text="value.name" />
-        </router-link>
-      </li>
-    </ul>
+  <div class="nav">
+    <div class="nav__item" v-for="(value, key) in inputData" :key="key">
+      <router-link class="nav__item--link" :to="value.link">
+      <slot name="title">
+        <span class="nav__item--title" v-text="value.name" />
+      </slot>
+      </router-link>
+    </div>
   </div>
 </template>
 

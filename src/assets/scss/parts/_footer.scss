@@ -1,0 +1,21 @@
+.footer {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, 0);
+
+    &--title {
+        color: $tertiary;
+        text-shadow: 2px 1.3px 1px black;
+        transition: 0.7s;
+        font-size: 18px;
+        font-weight: bold;
+
+        &:hover {
+            color: $globalhover;
+        }
+    }
+    &--link{
+        text-decoration: none;
+    }
+}

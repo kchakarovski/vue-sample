@@ -1,25 +1,23 @@
 <template>
   <div class="app">
-    <div class="bgimg">
-      <slider :inputData="sliderimages" />
-      <div class="header">
-        <navigation :inputData="header" />
-      </div>
-      <div class="card">
-        <card
-          v-for="(card, key) in cards"
-          :key="key"
-          :inputData="card"
-          @clickedButton="redirect"
-        />
-      </div>
+    <slider :inputData="sliderimages" />
+    <navigation :inputData="header" />
+    <div class="card">
+      <card
+        v-for="(card, key) in cards"
+        :key="key"
+        :inputData="card"
+        @clickedButton="redirect"
+      />
     </div>
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
     <footer>
       <div class="footer">
-        <a :href="footernav.link"><span v-text="footernav.name"></span></a>
+        <a class="footer--link" :href="footernav.link"
+          ><span class="footer--title" v-text="footernav.name"></span
+        ></a>
       </div>
     </footer>
   </div>

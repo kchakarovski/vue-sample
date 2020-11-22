@@ -1,0 +1,52 @@
+.nav {
+    display: flex;
+    background: black;
+    position: relative;
+    padding: 10px;
+    cursor: default;
+
+    &__item {
+        display: flex;
+        margin-left: 2%;
+        margin-right: 3%;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        flex-grow: 0.1;
+        border-right: 2px solid white;
+        transition: 0.4s ease-in-out;
+        cursor: default;
+
+        &--link {
+            transition: 0.4s ease-in-out;
+            color: $tertiary;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: $globalhover;
+            }
+        }
+
+        &:hover {
+            border-right-color: $globalhover;
+        }
+    }
+
+    .nav__item:nth-child(1) {
+        font-style: italic;
+        flex: 1 0;
+        display: flex;
+        font-size: 25px;
+        border-right: none;
+
+        &span {
+            cursor: pointer;
+        }
+    }
+
+    .nav__item:last-child {
+        border-right: none;
+    }
+}
