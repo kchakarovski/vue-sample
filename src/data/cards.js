@@ -1,20 +1,20 @@
 export const cards = [
     {
-      title: "Пијалоци",
+      title: "Drinks",
       img: "https://i.ibb.co/3vx908b/drinks.png",
       description: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla bla ipsum bla bla ipsum bla lorem ipsum ipsum lorem",
       link: "/produkti/pijaloci",        
      buttonText: "Read More",
     },
     {
-      title: "Брза Храна",
+      title: "Fast Food",
       img: "https://i.ibb.co/tQVyxcQ/food.png",
       description: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla bla ipsum bla bla ipsum bla lorem ipsum ipsum lorem",
       link: "/produkti/brza-hrana",      
       buttonText: "Read More",
     },
     {
-      title: "Десерти",
+      title: "Desserts",
       img: "https://i.ibb.co/Wk29bwv/desserts.png",
       description: "Lorem ipsum bla bla ipsum ipsum bla bla ipsum bla bla ipsum bla bla ipsum bla lorem ipsum ipsum lorem",
       link: "/produkti/deserti",      
