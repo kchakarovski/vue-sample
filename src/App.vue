@@ -2,8 +2,8 @@
   <div class="app">
     <div class="bgimg">
       <slider :inputData="sliderimages" />
-      <div id="header">
-        <navcomp :inputData="header" />
+      <div class="header">
+        <navigation :inputData="header" />
       </div>
       <div class="card">
         <card
@@ -18,24 +18,24 @@
       <router-view />
     </transition>
     <footer>
-      <div id="footer">
+      <div class="footer">
         <a :href="footernav.link"><span v-text="footernav.name"></span></a>
       </div>
     </footer>
   </div>
 </template>
 <script>
-import Navcomp from "../src/components/Navcomp";
-import { cards } from "../src/data/cards";
+import Navigation from "../src/components/Navigation";
 import Slider from "../src/components/Slider";
 import Card from "../src/components/Card";
+import { cards } from "../src/data/cards"; // DATA 
 export default {
   name: "App",
   components: {
     // "app-header": Header,
-    Navcomp,
+    Navigation,
     Slider,
-    Card,
+    Card
   },
   data() {
     return {

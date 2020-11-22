@@ -26,7 +26,7 @@
           <p class="products__row__item--price" v-text="value.price" />
         </slot>
       </div>
-      <!-- 3RD LOOP FOR FAST FOOD -->
+      <!-- 3RD LOOP FOR FAST FOOD ( PIZZAS ) -->
       <div
         class="products__row__item"
         v-for="(value, key) in value.pizzas"
@@ -42,8 +42,31 @@
             :alt="value.name"
           />
         </slot>
+        <slot name="ingredients">
+          <p
+            class="products__row__item--ingredients"
+            v-text="value.ingredients"
+          />
+        </slot>
         <slot name="price">
           <p class="products__row__item--price" v-text="value.price" />
+        </slot>
+      </div>
+      <!-- 4TH LOOP FOR FAST FOOD ( BURGERS ) -->
+      <div
+        class="products__row__item"
+        v-for="(value, key) in value.burgers"
+        :key="key"
+      >
+        <slot name="title">
+          <div class="products__row__item--title" v-text="value.name" />
+        </slot>
+        <slot name="img">
+          <img
+            class="products__row__item--img"
+            :src="value.img"
+            :alt="value.name"
+          />
         </slot>
         <slot name="ingredients">
           <p
@@ -51,8 +74,11 @@
             v-text="value.ingredients"
           />
         </slot>
+        <slot name="price">
+          <p class="products__row__item--price" v-text="value.price" />
+        </slot>
       </div>
-      <!-- 4TH LOOP FOR DESSERTS -->
+      <!-- 5TH LOOP FOR DESSERTS -->
       <div
         class="products__row__item"
         v-for="(value, key) in value.desserts"

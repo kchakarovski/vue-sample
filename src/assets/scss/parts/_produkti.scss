@@ -13,15 +13,11 @@
       width: 300px;
       margin: 60px;
       padding: 25px;
-      transition: 0.7s ease-in-out;
+      transition: 0.7s ease;
       background: #161f28de;
 
       &:hover {
         background: #161f28f7;
-
-        img {
-          box-shadow: 0px 0px 17px #5e5e5e;
-        }
       }
 
       &--title {
@@ -32,9 +28,10 @@
       }
 
       &--img {
-        border-radius: 50%;
         width: 100px;
         height: 100px;
+        display: block;
+        margin: 10px auto;
         transition: 0.7s ease-in-out;
       }
 
@@ -44,7 +41,8 @@
       }
 
       &--ingredients {
-        color: darkmagenta;
+        color: $tertiary;
+        text-align: center;
       }
     }
   }

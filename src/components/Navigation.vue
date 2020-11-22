@@ -1,14 +1,9 @@
   <template>
-  <div>
+  <div class="navigation">
     <ul class="main-flex">
       <li class="main-flex__item" v-for="(value, key) in inputData" :key="key">
         <router-link :to="value.link">
           <span v-text="value.name" />
-        </router-link>
-        <img :src="value.img" />
-        <div v-text="value.txt" />
-        <router-link :to="value.link">
-          <button @click="scroll('products')" v-text="value.btn" />
         </router-link>
       </li>
     </ul>
@@ -17,7 +12,7 @@
 
 <script>
 export default {
-  name: "navcomp",
+  name: "Navigation",
   data() {
     return {};
   },
@@ -29,17 +24,14 @@ export default {
           {
             name: "Maison Cacao",
             link: "Cacao",
-            subtitle: "",
           },
           {
             name: "Maison Cacao",
             link: "Cacao",
-            subtitle: "",
           },
           {
             name: "Maison Cacao",
             link: "Cacao",
-            subtitle: "",
           },
         ];
       },

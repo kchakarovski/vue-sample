@@ -1,4 +1,4 @@
-#header {
+.header {
     .main-flex {
         background: black;
         position: relative;
@@ -48,103 +48,16 @@
             cursor: pointer;
         }
     }
-
-    // .main-flex__item:nth-child(5) {
-    //     border-right: none;
-    // }
     .main-flex__item:last-child {
         border-right: none;
     }
 }
-
-// #main {
-//     .main-flex {
-//         &__item {
-//             background: #161f28de;
-//             display: flex;
-//             justify-content: center;
-//             margin: 60px;
-//             transition: 0.7s ease-in-out;
-//             z-index: 99;
-//             flex-direction: column;
-
-//             &:hover {
-//                 background: #161f28ed;
-
-//                 img {
-//                     box-shadow: 0px 0px 17px #5e5e5e;
-//                 }
-//             }
-//         }
-
-//         span {
-//             margin-top: 15px;
-//             display: flex;
-//             justify-content: center;
-//             position: relative;
-//             font-size: 35px;
-//             color: $tertiary;
-//         }
-
-//         img {
-//             border-radius: 50%;
-//             display: block;
-//             margin: 15px auto 0px;
-//             transition: 0.7s ease-in-out;
-//         }
-
-//         div {
-//             color: darkgray;
-//             text-transform: none;
-//             padding: 30px;
-//             text-shadow: 1px 1px 2.5px black;
-//             text-align: justify;
-//         }
-
-//         button {
-//             margin: 0px auto 20px;
-//             border: 2px solid;
-//             border-radius: 2px;
-//             padding: 5px;
-//             color: white;
-//             background: #5959597d;
-//             font-size: 21px;
-//             transition: 0.4s ease-in-out;
-//             display: flex;
-//             justify-content: center;
-//             width: 45%;
-//             outline: none;
-//             cursor: pointer;
-
-//             &:hover {
-//                 color: $globalhover;
-//                 border-color: #8f8f8f;
-//             }
-//         }
-
-//     }
-
-//     a {
-//         cursor: default;
-//     }
-// }
-
-#footer {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    width: 100%;
-
-    .main-flex {
-        justify-content: center;
-
-        &__item {
+.footer {
             font-size: 18px;
             font-weight: bold;
             text-shadow: 2px 1px 2px black;
-        }
-    }
-
+            text-align: center;
+        
     span {
         text-shadow: 2px 1.3px 1px black;
         transition: 0.7s;
