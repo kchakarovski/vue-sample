@@ -19,6 +19,7 @@
         cursor: default;
 
         &--link {
+            cursor: pointer;
             transition: 0.4s ease-in-out;
             color: $tertiary;
             text-decoration: none;

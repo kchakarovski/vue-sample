@@ -1,11 +1,13 @@
   <template>
   <div class="nav">
     <div class="nav__item" v-for="(value, key) in inputData" :key="key">
-      <router-link class="nav__item--link" :to="value.link">
-      <slot name="title">
-        <span class="nav__item--title" v-text="value.name" />
+      <slot name="link">
+        <a
+          @click="clickedNavigationItem(value.link)"
+          class="nav__item--link"
+          v-text="value.name"
+        />
       </slot>
-      </router-link>
     </div>
   </div>
 </template>
@@ -23,15 +25,15 @@ export default {
         return [
           {
             name: "Maison Cacao",
-            link: "Cacao",
+            link: "/",
           },
           {
             name: "Maison Cacao",
-            link: "Cacao",
+            link: "/sample",
           },
           {
             name: "Maison Cacao",
-            link: "Cacao",
+            link: "/contact",
           },
         ];
       },
@@ -40,6 +42,9 @@ export default {
   methods: {
     scroll(id) {
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    },
+    clickedNavigationItem(url) {
+      this.$emit("clickedNavigation", url);
     },
   },
 };

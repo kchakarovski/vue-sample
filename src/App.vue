@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <slider :inputData="sliderimages" />
-    <navigation :inputData="header" />
+    <navigation @clickedNavigation="NavigationLink" :inputData="header" />
     <div class="card">
       <card
         v-for="(card, key) in cards"
@@ -46,17 +46,14 @@ export default {
         {
           name: "Малага",
           link: "/",
-          btn: "",
         },
         {
           name: "За Нас",
           link: "/sample",
-          btn: "",
         },
         {
           name: "Контакт",
           link: "/contact",
-          btn: "",
         },
       ],
       footernav: {
@@ -78,6 +75,9 @@ export default {
     },
     notify(link) {
       alert(link);
+    },
+    NavigationLink(url) {
+      this.$router.push(url);
     },
   },
 };
