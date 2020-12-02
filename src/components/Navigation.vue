@@ -24,15 +24,15 @@ export default {
       default: () => {
         return [
           {
-            name: "Maison Cacao",
+            name: "Malaga",
             link: "/",
           },
           {
-            name: "Maison Cacao",
+            name: "About Us",
             link: "/sample",
           },
           {
-            name: "Maison Cacao",
+            name: "Contact",
             link: "/contact",
           },
         ];
@@ -44,7 +44,7 @@ export default {
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     },
     clickedNavigationItem(url) {
-      this.$emit("clickedNavigation", url);
+      this.$emit("clickedNavigation", url)
     },
   },
 };

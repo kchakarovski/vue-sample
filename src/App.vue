@@ -1,84 +1,46 @@
 <template>
   <div class="app">
     <slider :inputData="sliderimages" />
-    <navigation @clickedNavigation="NavigationLink" :inputData="header" />
-    <div class="card">
-      <card
-        v-for="(card, key) in cards"
-        :key="key"
-        :inputData="card"
-        @clickedButton="redirect"
-      />
-    </div>
+    <app-header />
+    <wrapper />
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
-    <footer>
-      <div class="footer">
-        <a class="footer--link" :href="footernav.link"
-          ><span class="footer--title" v-text="footernav.name"></span
-        ></a>
-      </div>
-    </footer>
+    <app-footer />
   </div>
 </template>
 <script>
-import Navigation from "../src/components/Navigation";
 import Slider from "../src/components/Slider";
-import Card from "../src/components/Card";
-import { cards } from "../src/data/cards"; // DATA
+import AppHeader from "../src/components/AppHeader";
+import AppFooter from "../src/components/AppFooter";
+import Wrapper from "../src/components/Wrapper";
 export default {
   name: "App",
   components: {
     // "app-header": Header,
-    Navigation,
     Slider,
-    Card,
+    AppHeader,
+    AppFooter,
+    Wrapper,
   },
   data() {
     return {
-      cards,
       sliderimages: [
         "https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
         "https://i.ibb.co/2SvXnwQ/164-1645988-wallpaper-burger-food-fast-food-burger-special.jpg",
       ],
-      header: [
-        {
-          name: "Малага",
-          link: "/",
-        },
-        {
-          name: "За Нас",
-          link: "/sample",
-        },
-        {
-          name: "Контакт",
-          link: "/contact",
-        },
-      ],
-      footernav: {
-        name: "Copyright © 2020 Cakarovski | Contact",
-        link: "mailto:cakarovskidev@gmail.com",
-      },
-      title: "Maison Cacao",
     };
   },
   methods: {
     change(msg) {
       this.message = msg;
     },
-    redirect(link) {
-      this.$router.push(link);
-      document
-        .getElementById("products")
-        .scrollIntoView({ behavior: "smooth" });
-    },
     notify(link) {
       alert(link);
     },
-    NavigationLink(url) {
-      this.$router.push(url);
-    },
+    // redirectFooter(url){
+    //   this.$router.push(url)
+    // }
   },
 };
 </script>
