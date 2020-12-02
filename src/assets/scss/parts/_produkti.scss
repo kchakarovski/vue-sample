@@ -5,6 +5,7 @@
   &__row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     &__item {
       display: flex;
